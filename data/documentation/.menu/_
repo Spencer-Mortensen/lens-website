@@ -1,0 +1,20 @@
+<ul>
+	<li><a href="/installation/">Installation</a></li>
+	<li>Directory structure
+		<ul>
+			<li><a href="/directory-structure/#coverage">coverage/</a></li>
+			<li><a href="/directory-structure/#tests">tests/</a></li>
+			<li><a href="/directory-structure/#autoload.php">autoload.php</a></li>
+			<li><a href="/directory-structure/#settings.ini">settings.ini</a></li>
+		</ul>
+	</li>
+	<li>
+		Writing tests
+		<ul>
+			<li><a href="/autoloading/">Autoloading</a></li>
+			<li><a href="/mocks/">Mocks</a></li>
+		</ul>
+	</li>
+	<li><a href="/running-tests/">Running tests</a></li>
+	<li><a href="/contact/">Contact</a></li>
+</ul>

@@ -1,0 +1,24 @@
+{
+    "name": "lens/lens.guide",
+    "type": "project",
+    "description": "The Lens website.",
+    "keywords": [
+        "lens",
+        "website",
+        "documentation"
+    ],
+    "homepage": "https://github.com/spencer-mortensen/lens.guide",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Spencer Mortensen",
+            "email": "spencer@lens.guide",
+            "homepage": "http://spencermortensen.com",
+            "role": "Copywriter"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "spencer-mortensen/synerga": "^0"
+    }
+}

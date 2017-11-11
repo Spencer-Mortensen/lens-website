@@ -1,0 +1,123 @@
+<h2>Prerequisites</h2>
+
+<ul>
+	<li>PHP 5.4+ or PHP 7.0+</li>
+</ul>
+
+<p>Lens should work out-of-the-box on your system.</p>
+
+
+<h2>Download</h2>
+
+<p>Lens comes in several forms:</p>
+
+<ul>
+	<li><a href="#executable">Executable</a></li>
+	<li><a href="#composer">Composer package</a></li>
+	<li><a href="#code">Source code</a></li>
+</ul>
+
+
+<h3 id="executable">Executable</h3>
+
+
+<h4>Linux</h4>
+
+<p>You can download the Lens executable by running a single command:</p>
+
+<div class="terminal">
+	<div>Download the executable:</div>
+	<pre><code>sudo php -r '$file = "/usr/local/bin/lens"; copy("http://lens.guide/lens.phar", $file); chmod($file, 0755);'</code></pre>
+</div>
+
+<p>Now you can use Lens in your projects!</p>
+
+<div class="terminal">
+	<div>View the version information:</div>
+	<pre><code>lens --version</code></pre>
+</div>
+
+
+<h4>Macintosh</h4>
+
+<p>You can download the Lens executable by running a single command:</p>
+
+<div class="terminal">
+	<div>Download the executable:</div>
+	<pre><code>sudo php -r '$file = "/usr/local/bin/lens"; @mkdir(dirname($file), 0755, true); copy("http://lens.guide/lens.phar", $file); chmod($file, 0755);'</code></pre>
+</div>
+
+<p>Now you can use Lens in your projects!</p>
+
+<div class="terminal">
+	<div>View the version information:</div>
+	<pre><code>lens --version</code></pre>
+</div>
+
+
+<h4>Windows</h4>
+
+<p>You can download the Lens executable by running a single command:</p>
+
+<div class="terminal">
+	<div>Download the executable:</div>
+	<pre><code>php -r "$file = 'C:\\Lens\\lens'; $url = 'http://lens.guide/lens'; @mkdir(dirname($file), 0755, true); copy(\"$url.phar\", $file); copy(\"$url.bat\", \"$file.bat\");"</code></pre>
+</div>
+
+<p>But you’re not done yet!
+You’ll also need to add the Lens executable to your system path.</p>
+
+<p>First, open the “System Properties” dialog:</p>
+
+<div class="terminal">
+	<div>Open the “System Properties” dialog:</div>
+	<pre><code>SystemPropertiesAdvanced</code></pre>
+</div>
+
+<p>Now click on the “Environment Variables” button:
+Under the "System variables" section, find the “Path” value (you may need to scroll a bit) and add “<samp>;C:\Lens</samp>” to the end.</p>
+
+<p>Now you can use Lens in your projects!</p>
+
+<div class="terminal">
+	<div>View the version information:</div>
+	<pre><code>lens --version</code></pre>
+</div>
+
+
+<h3 id="composer">Composer package</h3>
+
+<p>Lens is also available as a <a href="https://packagist.org/packages/lens/lens">Composer package</a>:</p>
+
+<div class="terminal">
+	<div>Add the Composer package to your project:</div>
+	<pre><code>composer require lens/lens</code></pre>
+</div>
+
+<p>And now you can use Lens:</p>
+
+<div class="terminal">
+	<div>View the version information:</div>
+	<pre><code>./vendor/bin/lens --version</code></pre>
+</div>
+
+<p>This option is a good way to get regular updates.</p>
+
+
+<h3 id="code">Source code</h3>
+
+<p>Lens is an open-source project!
+You can download the <a href="https://github.com/spencer-mortensen/lens">source code</a> from GitHub:</p>
+
+<div class="terminal">
+	<div>Clone the source code:</div>
+	<pre><code>git clone https://github.com/spencer-mortensen/lens.git</code></pre>
+</div>
+
+<p>And you can download the dependencies like this:</p>
+
+<div class="terminal">
+	<div>Download the dependencies:</div>
+	<pre><code>cd lens
+composer install</code></pre>
+</div>

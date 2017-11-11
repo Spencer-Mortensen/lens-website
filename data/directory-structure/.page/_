@@ -1,0 +1,96 @@
+<ul>
+	<li><a href="/directory-structure/#coverage">coverage/</a></li>
+	<li><a href="/directory-structure/#tests">tests/</a></li>
+	<li><a href="/directory-structure/#autoload.php">autoload.php</a></li>
+	<li><a href="/directory-structure/#settings.ini">settings.ini</a></li>
+</ul>
+
+<h2 id="coverage">coverage/</h2>
+
+<p>This directory contains your code coverage report, showing which lines of your codebase have been unit tested and how much remains to be tested.
+This directory will appear once you have some unit tests.
+It will refresh each time you run Lens.</p>
+
+<p>You can view your report opening the <samp>index.html</samp> file in your web browser.</p>
+
+<h2 id="tests">tests/</h2>
+
+<p>This directory is your place to write unit tests.</p>
+
+<p>Most people write tests that mirror the directory structure and filenames in their project source code, where each file fully tests a single class.</p>
+
+<h2 id="autoload.php">autoload.php</h2>
+
+<p>If you haven’t already, you should check out the <a href="/autoloading/">Autoloading</a> article.</p>
+
+<p>This is an optional file.
+If you create it, the Lens will use this file as your custom autoloader.</p>
+
+<p>Here’s an example:</p>
+
+<div class="file">
+    <div>autoload.php</div>
+    <pre><code class="php">&lt;?php
+
+call_user_func(function () {
+	$<span class="name">projectDirectory</span> = dirname(__DIR__);
+
+	$<span class="name">classes</span> = array(
+		<span class="green"><span class="value">'Example'</span> => <span class="value">"{$projectDirectory}/src"</span></span>
+	);
+
+	foreach ($<span class="name">classes</span> as $<span class="name">namespacePrefix</span> => $<span class="name">libraryPath</span>) {
+		$<span class="name">namespacePrefix</span> .= <span class="value">'\\'</span>;
+		$<span class="name">namespacePrefixLength</span> = strlen($<span class="name">namespacePrefix</span>);
+
+		$<span class="name">autoloader</span> = function ($<span class="name">class</span>) use ($<span class="name">namespacePrefix</span>, $<span class="name">namespacePrefixLength</span>, $<span class="name">libraryPath</span>) {
+			if (strncmp($<span class="name">class</span>, $<span class="name">namespacePrefix</span>, $<span class="name">namespacePrefixLength</span>) !== <span class="value">0</span>) {
+				return;
+			}
+
+			$<span class="name">relativeClassName</span> = substr($<span class="name">class</span>, $<span class="name">namespacePrefixLength</span>);
+			$<span class="name">relativeFilePath</span> = strtr($<span class="name">relativeClassName</span>, <span class="value">'\\'</span>, <span class="value">'/'</span>) . <span class="value">'.php'</span>;
+			$<span class="name">absoluteFilePath</span> = <span class="value">"{$libraryPath}/{$relativeFilePath}"</span>;
+
+			if (is_file($<span class="name">absoluteFilePath</span>)) {
+				include <span class="name">$absoluteFilePath</span>;
+			}
+		};
+
+		spl_autoload_register($<span class="name">autoloader</span>);
+	}
+});</code></pre>
+</div>
+
+
+<h2 id="settings.ini">settings.ini</h2>
+
+<p>You can customize the behavior of Lens by editing the configuration file in your Lens directory:</p>
+
+<div class="file">
+	<div>settings.ini</div>
+	<pre><code>src = <i>'../src'</i>
+autoload = <i>'autoload.php'</i></code></pre>
+</div>
+
+<h3>src</h3>
+
+<p>The path to your source-code directory.</p>
+
+<p>Set this to <samp>null</samp> if you’d like Lens to find your source-code directory automatically.
+Lens will find your source-code directory automatically if you name it “src” and put it in your project root.
+If you’d like to use a different path, then set this value to your custom source-code directory path (relative to the Lens directory).</p>
+
+<p>This source-code directory path is important for the code-coverage report.
+Lens will show code coverage only for the files that are in your source-code directory.
+Lens uses this path to suppress irrelevant coverage information about your third-party dependencies.</p>
+
+<h3>autoload</h3>
+
+<p>The path to your autoload file.</p>
+
+<p>Set this to <samp>null</samp> if you’d like Lens to find your autoload file automatically.
+Lens will find your autoload file automatically if you’re using Composer, or if you have an autoload file named “autoload.php” in your Lens directory.</li>
+If you’d like to use a different autoload path, then set this value to your custom autoload file path (relative to the Lens directory).</p>
+
+<p>Lens uses your autoload file not only to run your unit tests, but also to generate the code coverage report.</p>

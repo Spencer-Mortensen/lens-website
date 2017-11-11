@@ -1,0 +1,13 @@
+<p>If you provide no arguments, Lens will run all of your tests:</p>
+
+<div class="terminal">
+	<div>Run all of your tests:</div>
+	<pre><code>lens</code></pre>
+</div>
+
+<p>But if you provide an optional path argument, Lens will run only those tests that you specify:</p>
+
+<div class="terminal">
+	<div>Run some of your tests:</div>
+	<pre><code>lens <i>./tests/MyFile.php</i> <i>./tests/MyDirectory/</i></code></pre>
+</div>

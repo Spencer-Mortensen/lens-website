@@ -1,0 +1,83 @@
+body > h1 {
+	color: #fff;
+}
+
+article {
+	margin: -6em 0 0 14.5em;
+}
+
+article nav {
+	position: fixed;
+	left: 8em;
+	overflow: visible;
+	top: 4em;
+	width: 12em;
+}
+
+article nav h1 {
+	font-family: Voltaire;
+	font-size: 4em;
+}
+
+article nav h1 a {
+	color: #222;
+	text-decoration: none;
+}
+
+article nav ul {
+	list-style-type: none;
+}
+
+article nav > ul > li {
+	margin: .75em 0;
+}
+
+article nav > ul > li:first-child {
+	margin-top: 0;
+}
+
+article nav ul {
+	font-size: 1.2599em;
+}
+
+article nav ul ul {
+	font-size: .7937em;
+}
+
+/* TODO: move this to the "more.css" style sheet */
+#book {
+	width: 12em;
+	height: 12em;
+	position: absolute;
+	left: 50%;
+	top: 2em;
+	margin-left: -6em;
+	padding: 1.5em 0 0 3em;
+}
+
+#splash {
+	padding: 5em 0 0 1.5em;
+	margin-top: -14px;
+}
+
+/* TODO: move this to the style sheet for the contact page */
+.contact {
+	background: url('../images/spencer.jpg') center 0 no-repeat;
+	display: block;
+	margin: 3em .75em 1.5em .75em;
+	padding-top: 140px;
+	text-align: center;
+}
+
+.contact dt {
+	position: absolute;
+	left: -96em;
+}
+
+.contact dd {
+	line-height: 1.5em;
+}
+
+.contact dd.name {
+	font-weight: bold;
+}
