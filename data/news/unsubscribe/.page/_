@@ -1,0 +1,8 @@
+<p>Unsubscribe me from the announcements list:</p>
+
+<form method="post" action="http://scripts.dreamhost.com/add_list.cgi" class="news">
+    <input type="hidden" name="list" value="News">
+    <input type="hidden" name="domain" value="lens.guide">
+    <label for="news-email">Email:</label> <input type="email" name="email" required autofocus placeholder="email@example.com" id="news-email">
+    <input type="submit" name="unsub" value="Unsubscribe">
+</form>
