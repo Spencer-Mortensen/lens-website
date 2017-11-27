@@ -40,5 +40,4 @@ call_user_func(function () {
 });</code></pre>
 </div>
 
-<p>Your “<a href="/settings.ini/">settings.ini</a>” file will show you which autoloader Lens is using.
-You can also modify the “autoload” path there.</p>
+<p>Your “<a href="/settings.ini/">settings.ini</a>” file will show you which autoloader Lens is using, and you can modify the “autoload” path there.</p>

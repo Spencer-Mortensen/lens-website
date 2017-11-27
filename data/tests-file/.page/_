@@ -36,10 +36,9 @@ throw new <span class="name">Exception</span>(<span class="value">'Invalid usern
 <h2>// Test</h2>
 
 <p>This section contains the code that you’re testing.
-Usually, you’ll call one method (a unit of code) to test its behavior.</p>
+Usually, you’ll call one method here (a unit of code) to test its behavior.</p>
 
-<p>Any object that you instantiate here will be a <i>live</i> object.
-And you’ll get code-coverage credit for any lines of source code that are executed here.</p>
+<p>You’ll get code-coverage credit for any lines of source code that are executed while evaluating this section.</p>
 
 <h2>// Input</h2>
 
@@ -47,10 +46,12 @@ And you’ll get code-coverage credit for any lines of source code that are exec
 
 <p><i>Nothing here is real.</i>
 Any objects that you instantiate here are transformed into mock objects automatically by Lens.
-This lets you truly isolate the code being tested: your unit tests depend on <i>just</i> the code being tested, and not on the behavior of a dependency.</p>
+That way, your unit tests depend <i>only</i> on the code that you are testing, and not on the implementation details of some dependency.</p>
 
-<p>If you’d like to use a <i>live</i> dependency in your test, you can simply move the dependency up into the “// Tests” section:
+<p>If you’d like to use a <i>live</i> dependency, you can simply move the dependency up into the “// Tests” section:
 Your test will no longer be a unit test, but it can still be useful.</p>
+
+<p>Here’s an <a href="/mocks/">introduction to Mocks</a> (with working examples).</p>
 
 <h2>// Output</h2>
 
@@ -62,7 +63,7 @@ If there are any discrepancies, Lens will let you know.</p>
 <h2>Syntax</h2>
 
 <p>If you need it, here is the full syntax of a tests file.
-(With one exception: you can, of course, <i>also</i> use a multi-line comment anywhere within the file.)</p>
+(With one exception: you can always use multi-line comments anywhere within the file—exactly as you’d expect.)</p>
 
 <dl class="format">
 	<dt>file</dt><dd><img src="file.png" width="237" height="50"></dd>
