@@ -5,8 +5,6 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title><:include "<:path:>.page/.title":> | Lens</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" type="text/css" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css?family=Voltaire" type="text/css" rel="stylesheet">
 	<link href="/theme/css/site.css" rel="stylesheet" type="text/css">
 	<link href="/theme/css/less.css" rel="stylesheet" type="text/css">
 	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
