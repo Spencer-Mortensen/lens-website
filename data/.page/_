@@ -97,10 +97,9 @@ class <span class="name">Math</span>
 	<div>tests/Math.php</div>
 	<pre><code class="php">&lt;?php
 
-<span class="green">$<span class="name">math</span> = new <span class="name">Math</span>();</span>
-
 <span class="comment">// Test</span>
-<span class="green">$<span class="name">x</span> = $<span class="name">math</span>-&gt;<span class="name">add</span>(<span class="value">1</span>, <span class="value">1</span>);</span>
+<span class="green">$<span class="name">math</span> = new <span class="name">Math</span>();
+$<span class="name">x</span> = $<span class="name">math</span>-&gt;<span class="name">add</span>(<span class="value">1</span>, <span class="value">1</span>);</span>
 
 <span class="comment">// Output</span>
 $<span class="name">x</span> = <span class="value">2</span>;
@@ -108,7 +107,7 @@ $<span class="name">x</span> = <span class="value">2</span>;
 </div>
 
 <p>You can see that we’re using our new class in the test now.
-We’ll need to load that new class somehow, so let’s add an autoload file.
+We’ll need to load that new class somehow, so let’s create an autoload file.
 We’ll use a stub for now:</p>
 
 <div class="file">
@@ -158,7 +157,7 @@ class <span class="name">Math</span>
 <div class="terminal">
 	<div>Run Lens</div>
 	<pre><code>lens
-#    Math.php:
+# Math.php (Line 8):
 #
 #    // Test
 #    $x = $math-&gt;add(1, 1);
@@ -204,10 +203,9 @@ class <span class="name">Math</span>
 	<div>tests/Math.php</div>
 	<pre><code class="php">&lt;?php
 
-$<span class="name">math</span> = new <span class="name">Math</span>();
-
 
 <span class="comment">// Test</span>
+$<span class="name">math</span> = new <span class="name">Math</span>();
 $<span class="name">x</span> = $<span class="name">math</span>-&gt;<span class="name">add</span>(<span class="value">1</span>, <span class="value">1</span>);
 
 <span class="comment">// Output</span>
@@ -215,6 +213,7 @@ $<span class="name">x</span> = <span class="value">2</span>;
 
 
 <span class="comment">// Test</span>
+$<span class="name">math</span> = new <span class="name">Math</span>();
 $<span class="name">x</span> = $<span class="name">math</span>-&gt;<span class="name">multiply</span>(<span class="green">$<span class="name">a</span></span>, <span class="green">$<span class="name">b</span></span>);
 
 <span class="green"><span class="comment">// Input</span>

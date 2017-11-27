@@ -11,3 +11,14 @@
 	<div>Run some of your tests:</div>
 	<pre><code>lens <i>./tests/MyFile.php</i> <i>./tests/MyDirectory/</i></code></pre>
 </div>
+
+
+<h2>Reports</h2>
+
+<p>Lens can provide reports in different formats.
+This is mainly useful for continuous integration.</p>
+
+<div class="terminal">
+	<div>Generate a <a href="https://testanything.org/">TAP</a> report:</div>
+	<pre><code>lens --report=tap</code></pre>
+</div>

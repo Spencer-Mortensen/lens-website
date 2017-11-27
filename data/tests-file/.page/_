@@ -1,0 +1,77 @@
+<p>Here’s a pretty complicated tests file.
+You can see the sections clearly:</p>
+
+<div class="file">
+    <div>tests/Bot.php</div>
+    <pre><code class="php">&lt;?php
+
+namespace <span class="name">Example</span>;
+
+use <span class="name">Exception</span>;
+
+
+// Test
+$<span class="name">bot</span> = new <span class="name">Bot</span>($<span class="name">terminal</span>);
+$<span class="name">username</span> = $<span class="name">bot</span>-&gt;<span class="name">getUsername</span>();
+
+
+// Input
+$<span class="name">terminal</span> = new <span class="name">Terminal</span>();
+
+// Output
+$<span class="name">terminal</span>-&gt;<span class="name">write</span>(<span class="value">'Type your username and press Enter:'</span>);
+$<span class="name">terminal</span>-&gt;<span class="name">read</span>(); // return 'john';
+$<span class="name">username</span> = <span class="value">'john'</span>;
+
+
+// Input
+$<span class="name">terminal</span> = new <span class="name">Terminal</span>();
+
+// Output
+$<span class="name">terminal</span>-&gt;<span class="name">write</span>(<span class="value">'Type your username and press Enter:'</span>);
+$<span class="name">terminal</span>-&gt;<span class="name">read</span>(); // return '';
+throw new <span class="name">Exception</span>(<span class="value">'Invalid username'</span>);</code></pre>
+</div>
+
+<h2>// Test</h2>
+
+<p>This section contains the code that you’re testing.
+Usually, you’ll call one method (a unit of code) to test its behavior.</p>
+
+<p>Any object that you instantiate here will be a <i>live</i> object.
+And you’ll get code-coverage credit for any lines of source code that are executed here.</p>
+
+<h2>// Input</h2>
+
+<p>This section lists the input values for your test.</p>
+
+<p><i>Nothing here is real.</i>
+Any objects that you instantiate here are transformed into mock objects automatically by Lens.
+This lets you truly isolate the code being tested: your unit tests depend on <i>just</i> the code being tested, and not on the behavior of a dependency.</p>
+
+<p>If you’d like to use a <i>live</i> dependency in your test, you can simply move the dependency up into the “// Tests” section:
+Your test will no longer be a unit test, but it can still be useful.</p>
+
+<h2>// Output</h2>
+
+<p>This section lists any side effects that should happen as a result of running the test.
+You can list the expected method calls, assign variables, throw an exception, define a constant, or trigger any other side effects that should be produced by the code under test.
+Lens will verify that <i>exactly</i> those side effects are produced.
+If there are any discrepancies, Lens will let you know.</p>
+
+<h2>Syntax</h2>
+
+<p>If you need it, here is the full syntax of a tests file.
+(With one exception: you can, of course, <i>also</i> use a multi-line comment anywhere within the file.)</p>
+
+<dl class="format">
+	<dt>file</dt><dd><img src="file.png" width="237" height="50"></dd>
+	<dt>preamble</dt><dd><img src="preamble.png" width="351" height="68"></dd>
+	<dt>namespace</dt><dd><img src="namespace.png" width="249" height="36"></dd>
+	<dt>use</dt><dd><img src="use.png" width="353" height="68"></dd>
+	<dt>section</dt><dd><img src="section.png" width="189" height="50"></dd>
+	<dt>test</dt><dd><img src="test.png" width="171" height="36"></dd>
+	<dt>case</dt><dd><img src="case.png" width="207" height="68"></dd>
+	<dt>input</dt><dd><img src="input.png" width="179" height="36"></dd>
+	<dt>output</dt><dd><img src="output.png" width="189" height="36"></dd>
+</dl>

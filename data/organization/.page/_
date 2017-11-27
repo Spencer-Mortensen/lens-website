@@ -1,0 +1,48 @@
+<p>Most people organize their project like this:</p>
+
+<ul class="filesystem">
+	<li>MyProject/<ul>
+		<li>src/<ul>
+			<li>MyClass.php</li>
+		</ul></li>
+		<li>testing/<ul>
+			<li><a href="/coverage/">coverage/</a></li>
+			<li><a href="/tests/">tests/</a><ul>
+				<li>MyClass.php</li>
+			</ul></li>
+			<li><a href="/autoload.php/">autoload.php</a></li>
+			<li><a href="/settings.ini/">settings.ini</a></li>
+		</ul></li>
+	</ul></li>
+</ul>
+
+<p>Before you do anything else, you should create a “testing/tests/” directory and add a unit test.
+Lens will generate the rest for you as it becomes relevant.</p>
+
+<p>Here’s an example:</p>
+
+<div class="file">
+    <div>testing/tests/Math.php</div>
+    <pre><code class="php">&lt;?php
+
+<span class="comment">// Test</span>
+$<span class="name">x</span> = <span class="value">1</span> + <span class="value">1</span>;
+
+<span class="comment">// Output</span>
+$<span class="name">x</span> = <span class="value">2</span>;</code></pre>
+</div>
+
+<p>Now run Lens:</p>
+
+<div class="terminal">
+	<div>Run Lens</div>
+	<pre><code>lens</code></pre>
+</div>
+
+<p>A “<a href="/settings.ini/">settings.ini</a>” file should have just appeared.
+You can customize the path to your “src/” directory here in your settings file.</p>
+
+<p>Also, feel free to use a different name for your “testing” directory (and you don’t need to update any settings to do it).</p>
+
+<p>If you’re using Composer, then you’re good to go!
+(Otherwise, you should create an “<a href="/autoload.php/">autoload.php</a>” file to load your project.)</p>

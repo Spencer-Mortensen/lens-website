@@ -1,5 +1,0 @@
-<p>Autoloading will work out-of-the-box if you’re using Composer.</p>
-
-<p>If you’re not using Composer, or if you’d like a faster autoloader, then you can create your own “<a href="/directory-structure/#autoload.php">autoload.php</a>” file in the Lens directory.</p>
-
-<p>If you’d like to use an autoload file at a different location, then you can set a custom “autoload” path in your “<a href="/directory-structure/#settings.ini">settings.ini</a>” file.</p>

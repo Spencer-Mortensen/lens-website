@@ -135,7 +135,7 @@ $<span class="name">speller</span> = new <span class="name">Speller</span>($<spa
 $<span class="name">speller</span>-&gt;<span class="name">start</span>();
 
 // Input
-$<span class="name">terminal</span> = new <span class="name">Terminal</span>(); <span class="green">// Mock</span>
+$<span class="name">terminal</span> = new <span class="name">Terminal</span>();
 
 // Output
 <span class="green">$<span class="name">terminal</span>-&gt;<span class="name">write</span>(<span class="value">'Type a word:'</span>);
@@ -144,7 +144,8 @@ $<span class="name">terminal</span>-&gt;<span class="name">write</span>(<span cl
 </div>
 
 <p>Like everything in Lens, mocks are simple.
-Adding that “// Mock” comment was enough to create a mock, and we provided its expected behavior under the “Output” section.</p>
+Everything in the “Input” section is mocked automatically.
+And we provided the expected behavior under the “Output” section.</p>
 
 <p>That’s all there is to it!</p>
 

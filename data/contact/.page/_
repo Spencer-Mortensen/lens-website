@@ -15,8 +15,8 @@
 <p>Keep me informed when there is a big announcement:</p>
 
 <form method="post" action="http://scripts.dreamhost.com/add_list.cgi" class="news">
-	<input type="hidden" name="list" value="News">
-	<input type="hidden" name="domain" value="lens.guide">
+	<input type="hidden" name="list" value="lens">
+	<input type="hidden" name="domain" value="spencermortensen.com">
 	<label for="news-email">Email:</label> <input type="email" name="email" required autofocus placeholder="email@example.com" id="news-email">
 	<input type="submit" name="submit" value="Submit">
 </form>
@@ -24,7 +24,7 @@
 <h2 id="author">Author</h2>
 
 <p>Lens was created by Spencer Mortensen, a senior software engineer living in Boston, Massachusetts.
-Feel free to send him email.</p>
+Feel free to send him an email.</p>
 
 <dl class="contact">
 	<dt>Name:</dt><dd class="name">Spencer Mortensen</dd>
