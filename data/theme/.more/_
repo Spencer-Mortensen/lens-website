@@ -12,12 +12,12 @@
 
 <body>
 
-<h1><:include ".title":></h1><nav id="menu"><:menu ".menu":></nav>
+<h1><:include ".title":></h1><nav id="menu"><:include ".menu":></nav>
 
 <article>
 <h1 style="visibility: hidden"><:include "<:path:>.page/.title":></h1>
 
-<nav><h1>Lens</h1><:include "documentation/.menu":></nav>
+<nav id="contents"><h1>Lens</h1><:include "documentation/.menu":></nav>
 
 <div id="splash"><img src="/theme/images/splash.png" width="432" height="432" title="Lens catching a bug" alt="Illustration showing Lens catching a bug"></div>
 

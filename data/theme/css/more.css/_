@@ -6,7 +6,7 @@ article {
 	margin: -6em 0 0 14.5em;
 }
 
-article nav {
+#contents {
 	position: fixed;
 	left: 8em;
 	overflow: visible;
@@ -14,33 +14,33 @@ article nav {
 	width: 12em;
 }
 
-article nav h1 {
+#contents h1 {
 	font-family: Voltaire;
 	font-size: 4em;
 }
 
-article nav h1 a {
+#contents h1 a {
 	color: #222;
 	text-decoration: none;
 }
 
-article nav ul {
+#contents ul {
 	list-style-type: none;
 }
 
-article nav > ul > li {
+#contents > ul > li {
 	margin: .75em 0;
 }
 
-article nav > ul > li:first-child {
+#contents > ul > li:first-child {
 	margin-top: 0;
 }
 
-article nav ul {
+#contents ul {
 	font-size: 1.2599em;
 }
 
-article nav ul ul {
+#contents ul ul {
 	font-size: .7937em;
 }
 
@@ -82,11 +82,20 @@ article nav ul ul {
 	font-weight: bold;
 }
 
-ul.filesystem {
-	list-style-type: none;
+#organization {
+	background-color: #fafafa;
+	margin: 0 0 1.5em 3em;
+	padding: 1.5em 1.5em 1.5em 0;
+
+	-moz-border-radius: 1.125em;
+	-webkit-border-radius: 1.125em;
+	border-radius: 1.125em;
+
+	display: inline-block;
+	float: right;
 }
 
-ul.filesystem ul {
+#organization ul {
 	list-style-type: none;
 	padding-left: 1.5em;
 }

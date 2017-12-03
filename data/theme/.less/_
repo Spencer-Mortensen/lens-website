@@ -12,7 +12,7 @@
 
 <body>
 
-<h1><:include ".title":></h1><nav id="menu"><:menu ".menu":></nav>
+<h1><:include ".title":></h1><nav id="menu"><:include ".menu":></nav>
 
 <article>
 <h1><:include "<:path:>.page/.title":></h1>

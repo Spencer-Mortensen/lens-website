@@ -1,16 +1,16 @@
 <ul>
 	<li>Getting started
 		<ul>
-			<li><a href="/installation/">Installation</a></li>
-			<li><a href="/organization/">Organization</a></li>
+			<li><:link "Installation" "installation/":></li>
+			<li><:link "Organization" "organization/":></li>
 		</ul>
 	</li>
 	<li>
 		Using Lens
 		<ul>
-			<li><a href="/tests-file/">Tests</a></li>
-			<li><a href="/command/">Command</a></li>
+			<li><:link "Tests" "tests-file/":></li>
+			<li><:link "Command" "command/":></li>
 		</ul>
 	</li>
-	<li><a href="/contact/">Contact</a></li>
+	<li><:link "Contact" "contact/":></li>
 </ul>

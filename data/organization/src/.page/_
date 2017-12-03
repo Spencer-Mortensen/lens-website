@@ -1,0 +1,6 @@
+<nav id="organization"><:include "organization/.menu":></nav>
+
+<p>This directory contains the source code for your project.</p>
+
+<p>You can put your source code elsewhere if you prefer:
+Simply update the “src” path in your “<a href="/organization/testing/settings.ini/">settings.ini</a>” file.</p>

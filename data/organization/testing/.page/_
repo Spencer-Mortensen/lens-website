@@ -1,0 +1,9 @@
+<nav id="organization"><:include "organization/.menu":></nav>
+
+<p>This is your Lens directory.</p>
+
+<p>Feel free to rename this directory:
+You can change the name of this directory, and you don’t need to update any settings to do it.</p>
+
+<p>You can also <i>omit</i> this directory:
+You can put your “<a href="/organization/testing/tests/">tests/</a>” directly under your project root.</p>

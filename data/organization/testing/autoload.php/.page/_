@@ -1,4 +1,6 @@
-<p>If you’re using <a href="https://getcomposer.org/">Composer</a> to manage your dependencies, then you don’t need this “autoload.php” file.
+<nav id="organization"><:include "organization/.menu":></nav>
+
+<p>If you’re using Composer to manage your dependencies, then you don’t need this “autoload.php” file.
 Lens will use your Composer autoloader automatically.</p>
 
 <p>If you’re <i>not</i> using Composer, or if you’d like a faster autoloader, then go ahead and create this file in your Lens directory.
@@ -40,4 +42,4 @@ call_user_func(function () {
 });</code></pre>
 </div>
 
-<p>Your “<a href="/settings.ini/">settings.ini</a>” file will show you which autoloader Lens is using, and you can modify the “autoload” path there.</p>
+<p>Your “<a href="/organization/testing/settings.ini/">settings.ini</a>” file will show you which autoloader Lens is using, and you can modify the “autoload” path there.</p>

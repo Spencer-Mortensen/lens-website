@@ -17,7 +17,7 @@
 <article>
 <h1><:include "<:path:>.page/.title":></h1>
 
-<nav><h1><a href="/documentation/">Lens</a></h1><:include "documentation/.menu":></nav>
+<nav id="contents"><h1><a href="/documentation/">Lens</a></h1><:include "documentation/.menu":></nav>
 
 <:include "<:path:>.page":>
 </article>
