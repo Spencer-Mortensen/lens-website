@@ -1,0 +1,68 @@
+<h2>Linux</h2>
+
+<p>You can download the Lens executable by running a single command:</p>
+
+<div class="terminal">
+	<div>Download the executable:</div>
+	<pre><code>sudo php -r '$file = "/usr/local/bin/lens"; copy("http://lens.guide/lens.phar", $file); chmod($file, 0755);'</code></pre>
+</div>
+
+<p>And now you can use Lens in your projects!</p>
+
+<div class="terminal">
+	<div>View the version information:</div>
+	<pre><code>lens --version</code></pre>
+</div>
+
+<p>See the <a href="/organization/">Organization</a> page to get started.</p>
+
+
+<h2>Macintosh</h2>
+
+<p>You can download the Lens executable by running a single command:</p>
+
+<div class="terminal">
+	<div>Download the executable:</div>
+	<pre><code>sudo php -r '$file = "/usr/local/bin/lens"; @mkdir(dirname($file), 0755, true); copy("http://lens.guide/lens.phar", $file); chmod($file, 0755);'</code></pre>
+</div>
+
+<p>And now you can use Lens in your projects!</p>
+
+<div class="terminal">
+	<div>View the version information:</div>
+	<pre><code>lens --version</code></pre>
+</div>
+
+<p>See the <a href="/organization/">Organization</a> page to get started.</p>
+
+
+<h2>Windows</h2>
+
+<p>You can download the Lens executable by running a single command:</p>
+
+<div class="terminal">
+	<div>Download the executable:</div>
+	<pre><code>php -r "$file = 'C:\\Lens\\lens'; $url = 'http://lens.guide/lens'; @mkdir(dirname($file), 0755, true); copy(\"$url.phar\", $file); copy(\"$url.bat\", \"$file.bat\");"</code></pre>
+</div>
+
+<p>But you’re not done yet!
+You’ll also need to add the Lens executable to your system path.</p>
+
+<p>First, open the “System Properties” dialog by running this command in the Windows shell:</p>
+
+<div class="terminal">
+	<div>Open the “System Properties” dialog:</div>
+	<pre><code>SystemPropertiesAdvanced</code></pre>
+</div>
+
+<p>Now click on the “Environment Variables” button:
+Under the "System variables" section, find the “Path” value (you may need to scroll a bit) and add “<samp>;C:\Lens</samp>” to the end.</p>
+
+<p>And now you can use Lens in your projects!</p>
+
+<div class="terminal">
+	<div>View the version information:</div>
+	<pre><code>lens --version</code></pre>
+</div>
+
+<p>See the <a href="/organization/">Organization</a> page to get started.</p>

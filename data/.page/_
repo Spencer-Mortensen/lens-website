@@ -5,10 +5,10 @@ You get a command-line tool that you can run after you’ve refactored your code
 
 <h2>Why use Lens?</h2>
 
-<h3>Lens makes you more productive</h3>
+<h3>Lens is simple</h3>
 
 <p>Lens is so simple that it gets out of your way and lets you focus on your project.
-Here’s an example of a unit test:</p>
+Here’s an example:</p>
 
 <div class="porthole">
 	<pre><code>// Test
@@ -18,11 +18,15 @@ $x = 1 + 1;
 $x = 2;</code></pre>
 </div>
 
-<p>Lens is an <i>invisible</i> framework: you’ll never see it appear anywhere in your tests.
-That means there is there is almost no learning curve and nothing to stand in your way.
+<p>In most frameworks, unit tests are a mix of framework code and the code being tested.
+Lens simplifies things by <i>eliminating the framework code</i>.
+Lens reads the section headings (e.g. “// Test”) to assemble a working unit test.</p>
+
+<p>Because there is no framework code to learn, there is <b>virtually no learning curve</b>.
+Because the tests are so concise, you’re permanently <b>more productive</b>.
 Lens lets you focus on your project: What could be nicer than that?</p>
 
-<h3>Lens makes you more confident</h3>
+<h3>Lens catches everything</h3>
 
 <p>Lens catches anything that differs from your expected output.
 Lens catches notices and warnings, a stray echo statement, a surprise global variable, and anything else that could possibly go wrong.

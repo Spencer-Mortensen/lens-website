@@ -5,7 +5,7 @@
 <p>However, you only need to create the “<a href="/organization/src/">src/</a>” and “<a href="/organization/testing/tests/">tests/</a>” directories.
 Lens will generate everything else for you as it becomes relevant.</p>
 
-<p>If you’re using Composer, then you’re good to go!
-Otherwise, you should create an “<a href="/organization/testing/autoload.php/">autoload.php</a>” file for your project.</p>
+<p>If you’re using Composer, then autoloading will work automatically.
+Otherwise, you should create an “<a href="/organization/testing/autoload.php/">autoload.php</a>” file for your project now.</p>
 
 <p>You are ready to write your first <a href="/tests-file/">unit test</a>!</p>

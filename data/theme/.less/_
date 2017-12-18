@@ -4,7 +4,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title><:include "<:path:>.page/.title":> | Lens</title>
+	<title>Welcome | Lens</title>
 	<link href="/theme/css/site.css" rel="stylesheet" type="text/css">
 	<link href="/theme/css/less.css" rel="stylesheet" type="text/css">
 	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
@@ -15,7 +15,7 @@
 <h1><:include ".title":></h1><nav id="menu"><:include ".menu":></nav>
 
 <article>
-<h1><:include "<:path:>.page/.title":></h1>
+<h1><:include "<:path:>.title":></h1>
 
 <:include "<:path:>.page":>
 </article>

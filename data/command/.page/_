@@ -19,6 +19,11 @@
 This is mainly useful for continuous integration.</p>
 
 <div class="terminal">
+	<div>Generate an <a href="https://en.wikipedia.org/wiki/XUnit">xUnit</a> report:</div>
+	<pre><code>lens --report=xunit</code></pre>
+</div>
+
+<div class="terminal">
 	<div>Generate a <a href="https://testanything.org/">TAP</a> report:</div>
 	<pre><code>lens --report=tap</code></pre>
 </div>
