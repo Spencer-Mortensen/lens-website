@@ -1,6 +1,6 @@
 <nav id="organization"><:include "organization/.menu":></nav>
 
-<p>Lens will automatically create this settings file for you when you first run Lens.</p>
+<p>Lens will create this settings file for you when you first run Lens.</p>
 
 <p>Here’s an example:</p>
 

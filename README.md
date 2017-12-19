@@ -9,6 +9,8 @@ Clone the Lens website:
 ```bash
 cd /home/username/projects
 git clone git@github.com:spencer-mortensen/lens.guide.git
+cd lens.guide
+composer install
 ```
 
 Install the Apache webserver, if you haven't already:  
@@ -18,24 +20,18 @@ apt-get install apache2 libapache2-mod-php php
 
 Create the file "/etc/apache2/sites-available/lens.conf" using the appropriate
 paths for your filesystem:   
-```bash
-<VirtualHost *:80>
-	ServerName lens
-
-	ServerAdmin webmaster@localhost
-	DocumentRoot "/home/username/projects/lens.guide"
-
-	<Directory "/home/username/projects/lens.guide">
-		Options FollowSymLinks
-		AllowOverride All
-
-		Require all granted
-	</Directory>
-
-	ErrorLog ${APACHE_LOG_DIR}/error.log
-	CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
-```
+<pre>&lt;VirtualHost *:80&gt;
+&#9;ServerName lens
+&#9;ServerAdmin webmaster@localhost
+&#9;DocumentRoot "/home/username/projects/lens.guide"<br>
+&#9;&lt;Directory "/home/username/projects/lens.guide"&gt;
+&#9;&#9;Options FollowSymLinks
+&#9;&#9;AllowOverride All
+&#9;&#9;Require all granted
+&#9;&lt;/Directory&gt;<br>
+&#9;ErrorLog ${APACHE_LOG_DIR}/error.log
+&#9;CustomLog ${APACHE_LOG_DIR}/access.log combined
+&lt;/VirtualHost&gt;</pre>
 
 Enable the website:  
 ```bash

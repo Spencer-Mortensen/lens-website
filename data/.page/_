@@ -22,16 +22,15 @@ $x = 2;</code></pre>
 Lens simplifies things by <i>eliminating the framework code</i>.
 Lens reads the section headings (e.g. “// Test”) to assemble a working unit test.</p>
 
-<p>Because there is no framework code to learn, there is <b>virtually no learning curve</b>.
-Because the tests are so concise, you’re permanently <b>more productive</b>.
+<p>Because there is no framework code to learn, there is almost no learning curve.
+Because the tests are so concise, you’re permanently more productive.
 Lens lets you focus on your project: What could be nicer than that?</p>
 
 <h3>Lens catches everything</h3>
 
 <p>Lens catches anything that differs from your expected output.
-Lens catches notices and warnings, a stray echo statement, a surprise global variable, and anything else that could possibly go wrong.
 Other unit-testing frameworks check <i>only those things that are made explicit in your assertions</i>.
-Lens widens the net and catches everything.</p>
+Lens widens the net and catches everything—a fatal error, a stray echo statement, a surprise global variable—<i>everything</i>.</p>
 
 <!--<p>Some things can never be undone, such as a constant definition or a fatal error:
 In other unit-testing frameworks, these things “bleed through” to affect your remaining tests.

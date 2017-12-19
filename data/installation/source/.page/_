@@ -4,7 +4,6 @@ You can interact with the <a href="https://github.com/spencer-mortensen/lens">so
 <div class="terminal">
 	<div>Clone the source code:</div>
 	<pre><code>git clone https://github.com/spencer-mortensen/lens.git
-
 cd lens
 composer install</code></pre>
 </div>

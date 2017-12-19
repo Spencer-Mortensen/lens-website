@@ -1,3 +1,5 @@
+<h2>Running Tests</h2>
+
 <p>If you provide no arguments, Lens will run all of your tests:</p>
 
 <div class="terminal">
@@ -5,18 +7,18 @@
 	<pre><code>lens</code></pre>
 </div>
 
-<p>But if you provide an optional path argument, Lens will run only those tests that you specify:</p>
+<p>But if you provide one or more paths, Lens will run <i>only</i> the tests at those locations:</p>
 
 <div class="terminal">
 	<div>Run some of your tests:</div>
-	<pre><code>lens <i>./tests/MyFile.php</i> <i>./tests/MyDirectory/</i></code></pre>
+	<pre><code>lens <i>MyFile.php</i> <i>MyDirectory</i></code></pre>
 </div>
 
 
 <h2>Reports</h2>
 
 <p>Lens can provide reports in different formats.
-This is mainly useful for continuous integration.</p>
+This is mainly useful for integrating with third-party tools:</p>
 
 <div class="terminal">
 	<div>Generate an <a href="https://en.wikipedia.org/wiki/XUnit">xUnit</a> report:</div>
@@ -27,3 +29,13 @@ This is mainly useful for continuous integration.</p>
 	<div>Generate a <a href="https://testanything.org/">TAP</a> report:</div>
 	<pre><code>lens --report=tap</code></pre>
 </div>
+
+
+<h2>Version</h2>
+
+<div class="terminal">
+	<div>View the version information</div>
+	<pre><code>lens --version</code></pre>
+</div>
+
+<p>Here are the current <a href="https://github.com/Spencer-Mortensen/lens/releases">releases</a> for comparison.</p>
