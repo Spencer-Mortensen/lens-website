@@ -20,18 +20,13 @@ cd lens.guide
 composer install
 ```
 
-And create the file "/var/www/lens/index.php":  
+Create the file "/var/www/lens/index.php":  
 <pre>&lt;?php<br>
 $projectDirectory = <i>'/home/user/lens.guide'</i>;<br>
 $data = "{$projectDirectory}/data";
 require "{$projectDirectory}/vendor/spencer-mortensen/synerga/synerga.php";</pre>
 
 Be sure to use the correct path to your "lens.guide" directory!
-
-Add "lens" to your "/etc/hosts" file:  
-```bash
-127.0.0.1	localhost lens
-```
 
 Create the file "/etc/apache2/sites-available/lens.conf":  
 <pre>&lt;VirtualHost *:80>
@@ -63,6 +58,11 @@ Enable the website:
 a2enmod rewrite
 a2ensite lens
 service apache2 restart
+```
+
+Add "lens" to your "/etc/hosts" file:  
+```bash
+127.0.0.1	localhost lens
 ```
 
 View your personal copy of the Lens website:  
