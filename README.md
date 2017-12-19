@@ -60,8 +60,9 @@ Create the file "/etc/apache2/sites-available/lens.conf":
 
 Enable the website:  
 ```bash
+a2enmod rewrite
 a2ensite lens
-service apache2 reload
+service apache2 restart
 ```
 
 View your personal copy of the Lens website:  
