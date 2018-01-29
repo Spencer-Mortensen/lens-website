@@ -19,6 +19,6 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "spencer-mortensen/synerga": "^0"
+        "spencer-mortensen/synerga": "~0"
     }
 }

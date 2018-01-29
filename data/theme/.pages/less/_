@@ -4,9 +4,11 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Welcome | Lens</title>
+	<meta name="viewport" content="width=480, initial-scale=1">
+	<title>Lens: a unit-testing framework for PHP</title>
 	<link href="/theme/css/site.css" rel="stylesheet" type="text/css">
 	<link href="/theme/css/less.css" rel="stylesheet" type="text/css">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112827963-1"></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-112827963-1');</script>
 	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
 </head>
 
