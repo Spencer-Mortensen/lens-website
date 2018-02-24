@@ -1,4 +1,4 @@
-<p>Image that we’re testing a class from your project that looks like this:</p>
+<p>Imagine that we’re testing a class from your project that looks like this:</p>
 
 <dl class="file">
 	<dt>src/Greeter.php</dt>
@@ -14,6 +14,21 @@ class Greeter
         $day = date('l', time());
 
         return "Hello {$name}, it's {$day} today!";
+    }
+}</code></dd>
+</dl>
+
+<dl class="file">
+	<dt>src/Person.php</dt>
+	<dd><code>&lt;?php
+
+namespace Example;
+
+class Person
+{
+    public function getName()
+    {
+        return null;
     }
 }</code></dd>
 </dl>
@@ -54,7 +69,17 @@ $output = "Hello Ann, it's Saturday today!";
 <p>Did you see how we used a comment to provide the expected behavior for each function call?
 That’s all there is to it!</p>
 
-<p>Run Lens to see the results:</p>
+<p>Let’s add an autoloader stub, in case you need it:</p>
+
+<dl class="file">
+    <dt>lens/autoload.php</dt>
+    <dd><code>&lt;?php
+
+require dirname(__DIR__) . '/src/Greeter.php';
+require dirname(__DIR__) . '/src/Person.php';</code></dd>
+</dl>
+
+<p>Now run Lens to see the results:</p>
 
 <code class="terminal">lens
 # Passed tests: 1</code>
@@ -64,4 +89,4 @@ You’re able to mock built-in functions and external classes!</p>
 
 <p>And that was the <i>entire learning curve</i> for Lens.
 Now you can test anything.
-All that’s left is to write more unit tests and <:link "watch your metrics climb" "get-started/see-metrics":>.</p>
+All that’s left is to write more unit tests and <:link "watch your metrics climb" "get-started/see-metrics/":>.</p>

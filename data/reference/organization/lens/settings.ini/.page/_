@@ -11,7 +11,7 @@ But feel free to change any of the settings!</p>
 
 <dl class="dictionary">
 	<dt id="src">src</dt>
-	<dd>The path to your <:link "src" "reference/organization/src":> directory, relative to the project root.</dd>
+	<dd>The path to your <:link "src" "reference/organization/src/":> directory, relative to the project root.</dd>
 </dl>
 
 <dl class="dictionary">

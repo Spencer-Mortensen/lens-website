@@ -4,6 +4,5 @@
 <:include "get-started/.menu":>
 	</li>
 	<li><:link "Reference" "reference/":></li>
-	<li><:link "Articles" "articles/":></li>
 	<li><:link "Contact" "contact/":></li>
 </ul>
