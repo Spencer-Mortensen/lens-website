@@ -1,0 +1,204 @@
+<ul>
+	<li>Exceptions</li>
+	<li>Errors</li>
+	<li>Fatal errors</li>
+</ul>
+
+<h2>Exceptions</h2>
+
+<p>PHP supports try-catch blocks for exception handling. This works beautifully for exceptions that you create and consume.</p>
+
+<code class="php">
+try {
+	throw new Exception('Armageddon', 666);
+} catch (Exception $exception) {
+	$class = get_class($exception);
+	$code = $exception->getCode();
+	$message = $message->getMessage();
+	$file = $exception->getFile();
+	$line = $excepton->getLine();
+	$previousException = $message->getPrevious();
+}
+</code>
+
+<p>There are two reasons why this is useful:</p>
+
+<dl>
+	<dt>Information</dt>
+	<dd>When a line of code fails, there is a wealth of information available at that moment.
+	The exception object captures all of this information and bundles it up into a unit that can be passed along until it is needed.</dd>
+
+	<dt>Control flow</dt>
+	<dd>Throwing an exception is like launching an ejection seat:
+	The exception will rise through the execution stack until it is either caught or it reaches the global scope.
+	This allows you to build an alternative execution path for your errors, so you can either recover or report the issue.</dd>
+</dl>
+
+<p>Here is some additional reading about the various exception classes that are available to you:</p>
+
+<ul>
+	<li>Exception class: http://php.net/manual/en/class.exception.php</li>
+	<li>Core Exceptions: http://php.net/manual/en/reserved.exceptions.php</li>
+	<li>SPL Exceptions: http://php.net/manual/en/spl.exceptions.php</li>
+</ul>
+
+<p>The only trouble is that PHP itself rarely uses exceptions handling! Instead, PHP tends to generate errors like this:</p>
+
+<code>
+???
+</code>
+
+<code> <-- PHP 5: generates an error
+PHP Notice:  Use of undefined constant x - assumed 'x' in Command line code on line 1
+PHP Stack trace:
+PHP   1. {main}() Command line code:0
+
+Notice: Use of undefined constant x - assumed 'x' in Command line code on line 1
+
+Call Stack:
+    0.0001     357104   1. {main}() Command line code:0
+</code>
+
+<code> <-- PHP 7: throws an exception
+???
+</code>
+
+<p>These errors slip like ghosts through your "catch" statements and are written directly to the output buffers.
+PHP is moving towards exception handling.
+In PHP 7, some errors (E_RECOVERABLE_ERROR and E_ERROR) have been converted into Error exceptions.
+These Error exceptions do not extend the Exception class--their inheritance trees are completely separate--but both the Exception and Error classes implement a new Throwable interface in PHP 7.</p>
+
+The intention is that users will extend the Exception classes for their own exceptions, and the PHP core will own the Error exceptions. To keep things simple, user-defined classes cannot implement the Throwable interface, so there will only ever be two base classes: Exception and Error.
+
+Error class: http://php.net/manual/en/class.error.php
+(and child classes)
+
+As a result, you'll need to modify your try-catch block in order to catch all possible exceptions:
+
+<CODE>
+try {
+	...
+} catch (Exception $exception) {
+	...
+} catch (Error $exception) {
+	...
+}
+</CODE>
+
+But there are still plenty of notices, warnings, and errors that will slip through the cracks if you do this! Fortunately, there is a way to convert most errors into exception objects that can be handled.
+
+
+ERRORS
+
+These errors slip like ghosts through your "catch" statements and are written directly to the output buffers.
+
+<CODE>
+define(x, 'x');
+</CODE>
+
+<CODE>
+PHP Notice:  Use of undefined constant x - assumed 'x' in Command line code on line 1
+PHP Stack trace:
+PHP   1. {main}() Command line code:0
+
+Notice: Use of undefined constant x - assumed 'x' in Command line code on line 1
+
+Call Stack:
+    0.0001     357104   1. {main}() Command line code:0
+</CODE>
+
+However, you can turn errors into catchable exceptions like this:
+
+<CODE>
+$errorHandler = function () {
+};
+
+set_error_handler($errorHandler);
+
+try {
+	define(x, 'x');
+} catch (ErrorException $exception) {
+	echo "caught!\n";
+}
+
+restore_error_handler();
+</CODE>
+
+set_error_handler: http://php.net/manual/en/function.set-error-handler.php
+restore_error_handler: http://php.net/manual/en/function.restore-error-handler.php
+
+Internally, PHP keeps a stack of error handlers. The "set_error_handler" function adds your error handler to the top of the stack, and the "restore_error_handler" function removes an error handler from the top of the stack.
+
+When PHP generates an error, it will first look for an error handler at the top of the error handler stack. If there is an error handler there, PHP will invoke it, using the $file and $line from the failing line of code. Only one error handler is called--the error handler at the top of the stack--but the stack can be arbitrarily deep. That way, you can safely use the "set_error_handler / restore_error_handler" functions to build libraries without interfering with anyone else.
+
+This technique allows you to catch virtually all errors--but fatal errors cannot be caught this way. When a fatal error is triggered, normal execution halts and the script enters shutdown mode. That means your try-catch block won't be executed. As a result, fatal errors need their own approach (see below).
+
+If the stack is empty, then PHP will generate the error as usual. Errors are written to STDOUT and STDERR for command-line scripts, and to the HTTP body of a web request. This can corrupt your output, and it can reveal sensitive details about the configuration of your server to hackers.
+
+As a result, PHP allows you control what is written to the output buffer:
+http://php.net/manual/en/errorfunc.configuration.php
+
+You should always configure your production "php.ini" file like this:
+
+<CODE>php.ini
+display_errors = Off
+</CODE>
+
+You can also set this property at run-time, although some errors (such as compile-time errors) will still be shown to the end users:
+
+<CODE>
+display_errors('0');
+</CODE>
+
+You can also control which errors are severe enough to show:
+
+<CODE>php.ini
+error_reporting = E_ALL
+</CODE>
+
+This affects only the display of error messages; your "set_error_handler / restore_error_handler" logic is not affected.
+
+You can suppress an individual error with the "@" operator, like this:
+http://php.net/manual/en/language.operators.errorcontrol.php
+
+<CODE>
+@define(x, 'x');
+</CODE>
+
+...but it's better to use an error handler, and catch the resulting exception. That way, you can handle or report the issue.
+
+Because inline error suppression is a bad practice, some environments will report uses of the "@" operator:
+http://php.net/manual/en/scream.examples-simple.php
+
+
+FATAL ERRORS
+
+It's possible to catch a fatal error using a shutdown function:
+http://php.net/manual/en/function.register-shutdown-function.php
+
+PHP keeps a queue of shutdown functions. You can add your own shutdown function to the end of the queue using the "register_shutdown" function. Later, just before the script terminates, PHP will execute each shutdown function in turn, moving from the front of the queue to the end of the queue.
+
+If any shutdown function calls the "exit" command, then the script will terminate and no further shutdown functions will be called.
+
+Unfortunately, this makes it difficult to catch a fatal error:
+ * The shutdown function is called even when the script is ending normally.
+ * The fatal error itself is not available.
+ * An earlier shutdown function can halt execution before your shutdown function is called, making it unreliable.
+
+<CODE>
+require 'x';
+</CODE>
+
+<CODE>
+$handler = function () {
+	error_get_last();
+
+	if (function_exists('error_clear_last')) {
+		error_clear_last();
+	}
+};
+
+register_shutdown_function($handler);
+
+require 'x';
+</CODE>

@@ -1,1 +1,9 @@
-<ul><li><:link "Welcome" "":></li><li><:link "Documentation" "documentation/":></li></ul>
+<ul>
+	<li><:link "Why?" "why/":></li>
+	<li>Get started
+<:include "get-started/.menu":>
+	</li>
+	<li><:link "Reference" "reference/":></li>
+	<li><:link "Articles" "articles/":></li>
+	<li><:link "Contact" "contact/":></li>
+</ul>

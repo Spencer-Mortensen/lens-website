@@ -1,0 +1,76 @@
+<p>Image that we’re testing a class from your project that looks like this:</p>
+
+<dl class="file">
+	<dt>src/Math.php</dt>
+	<dd><code>&lt;?php
+
+namespace Example;
+
+use RangeException;
+
+class Math
+{
+    public function add($m, $n)
+    {
+        return $m + $n;
+    }
+
+    public function divide($m, $n)
+    {
+        if ($n === 0) {
+            throw new RangeException();
+        }
+
+        return $m / $n;
+    }
+}</code></dd>
+</dl>
+
+<p>Let’s write the unit tests:</p>
+
+<dl class="file">
+	<dt>lens/tests/Math.php</dt>
+	<dd><code>&lt;?php
+
+namespace Example;
+
+use RangeException;
+
+
+// Test
+$math = new Math();
+$c = $math-&gt;add(1, 1);
+
+// Output
+$c = 2;
+
+
+// Test
+$math = new Math();
+$c = $math-&gt;divide($a, $b);
+
+// Input
+$a = 1;
+$b = 2;
+
+// Output
+$c = 0.5;
+
+// Input
+$a = 1;
+$b = 0;
+
+// Output
+throw new RangeException();</code></dd>
+</dl>
+
+
+<p>Run Lens to see the results:</p>
+
+<code class="terminal">lens Math.php
+# Passed tests: 1</code>
+
+<p>Congratulations!
+You can test object-oriented code!</p>
+
+<p>Now let’s see what happens when we need a <:link "mock" "get-started/write-a-test/mocks":>.</p>

@@ -1,6 +1,0 @@
-<nav id="organization"><:include "organization/.menu":></nav>
-
-<p>This directory is your place to write unit tests.</p>
-
-<p>Most people write tests that mirror the directories and files in their “<a href="/organization/src/">src/</a>” directory.
-Each tests file completely tests the matching source file.</p>

@@ -1,0 +1,7 @@
+<p>Now that you’ve written some tests, a coverage directory has appeared.</p>
+
+<p>Open the “lens/coverage/index.html” file in your web browser.
+Here’s an example of what you might see:</p>
+
+<div id="coverage-directory" class="photo"><img width="169" height="71" src=".page/coverage-directory.png" alt="Code coverage: directory view"></div>
+<div id="coverage-file" class="photo"><img width="284" height="327" src=".page/coverage-file.png" alt="Code coverage: file view"></div>

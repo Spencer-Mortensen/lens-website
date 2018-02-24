@@ -1,0 +1,15 @@
+<p>Here is the full syntax of a tests file, in case you need it to integrate with a third-party tool:</p>
+
+<dl class="format">
+	<dt>file</dt><dd><img src="file.png" width="237" height="50"></dd>
+	<dt>preamble</dt><dd><img src="preamble.png" width="351" height="68"></dd>
+	<dt>namespace</dt><dd><img src="namespace.png" width="249" height="36"></dd>
+	<dt>use</dt><dd><img src="use.png" width="353" height="68"></dd>
+	<dt>section</dt><dd><img src="section.png" width="189" height="50"></dd>
+	<dt>test</dt><dd><img src="test.png" width="171" height="36"></dd>
+	<dt>case</dt><dd><img src="case.png" width="207" height="68"></dd>
+	<dt>input</dt><dd><img src="input.png" width="179" height="36"></dd>
+	<dt>output</dt><dd><img src="output.png" width="189" height="36"></dd>
+</dl>
+
+<p>Note that you can always use multi-line comments anywhere within a file.</p>

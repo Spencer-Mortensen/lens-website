@@ -4,22 +4,21 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=480, initial-scale=1">
 	<title><:include "<:path:>.title":> | Lens</title>
-	<link href="/theme/css/site.css" rel="stylesheet" type="text/css">
-	<link href="/theme/css/more.css" rel="stylesheet" type="text/css">
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112827963-1"></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-112827963-1');</script>
+	<link href="/theme/css/style.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Lora|Inconsolata" rel="stylesheet">
 	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112827963-1"></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-112827963-1');</script>
 </head>
 
 <body>
 
-<h1><:include ".title":></h1>
+<header><a href="/">Lens</a></header>
 
 <article>
 <h1><:include "<:path:>.title":></h1>
 
-<nav id="contents"><h1><a href="/documentation/">Lens</a></h1><:include "documentation/.menu":></nav>
+<nav id="menu"><:include ".menu":></nav>
 
 <:include "<:path:>.page":>
 </article>

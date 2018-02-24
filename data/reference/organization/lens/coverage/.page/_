@@ -1,0 +1,5 @@
+<nav id="organization"><:include "reference/organization/.menu":></nav>
+
+<p>This directory contains your code coverage report, showing which lines of your codebase have been unit tested and how much remains to be tested.</p>
+
+<p>This directory will appear once you have a “<a href="/reference/organization/src/">src/</a>” directory and some unit tests.</p>

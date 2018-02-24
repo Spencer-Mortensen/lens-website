@@ -1,0 +1,23 @@
+<ul>
+	<li>MyProject/
+		<ul>
+			<li><:link "src/" "reference/organization/src/":>
+				<ul>
+					<li>MyClass.php</li>
+				</ul>
+			</li>
+			<li><:link "lens/" "reference/organization/lens/":>
+				<ul>
+					<li><:link "coverage/" "reference/organization/lens/coverage/":></li>
+					<li><:link "tests/" "reference/organization/lens/tests/":>
+						<ul>
+							<li>MyClass.php</li>
+						</ul>
+					</li>
+					<li><:link "autoload.php" "reference/organization/lens/autoload.php/":></li>
+					<li><:link "settings.ini" "reference/organization/lens/settings.ini/":></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
