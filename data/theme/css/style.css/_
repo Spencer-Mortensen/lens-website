@@ -1,51 +1,135 @@
+/* 1024 */
+/* 336 + 906 <= 1280 */
+
 html {
-	font-size: 21px;
+	font-size: 20px;
 }
 
 body {
 	background-color: #fff;
-	color: #222;
+	color: #111111;
+	font-family: 'Libre Baskerville', serif;
 	font-family: 'Lora', serif;
-	line-height: 1.5874em;
-	padding: 6.25% 12.5% 6.25% 12.5%;
-	max-width: 1296px;
-	margin: auto;
-}
-
-#menu {
-	background-color: #fafafa;
-
-	-moz-border-radius: .75em;
-	-webkit-border-radius: .75em;
-	border-radius: .75em;
-
-	border: 1px solid #f0f0f0;
-
-	float: right;
-	margin: 0 0 1.5em 1.5em;
-	padding: 1.5em;
-}
-
-#menu ul {
-	list-style-type: none;
-}
-
-#menu li {
-}
-
-#menu ul ul {
-	position: relative;
-	top: -.125em;
-	font-size: .7937em;
-	padding: 0 0 0 1.5em;
+	white-space: nowrap;
 }
 
 header {
-	color: #ccc;
+	display: inline-block;
+	line-height: 1.5em;
+	padding: 6em;
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
+	position: sticky;
+	top: 0;
+	vertical-align: top;
+}
+
+header h1 {
+	font-size: 18px;
+}
+
+header h1 a {
+	color: #cccccc;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: 64px 64px; /* TODO: use em units */
+	background-position: top center;
+	background-image: url('/theme/images/lens.svg');
+	font-family: 'Montserrat', serif;
+	font-weight: normal;
+	padding: 72px 12px 0 12px;
+	margin: 0 -12px 3em -12px;
+	text-transform: uppercase;
+	letter-spacing: .3333em;
+}
+
+header h1 a[href] {
+	font-family: 'Montserrat', serif;
+}
+
+header nav {
+	font-size: 18px; /* TODO: use typographic scale */
+	min-width: 7.5em;
 }
 
 header a {
+	color: #111;
+	font-family: 'Libre Baskerville', serif;
+	font-weight: bold;
+}
+
+header a[href] {
+	font-family: 'Lora', serif;
+	font-weight: normal;
+}
+
+header ul {
+	list-style-type: none;
+}
+
+header ol {
+	list-style-position: inside;
+}
+
+header li {
+	line-height: 1em;
+	padding: .5em 0;
+}
+
+header li:first-child {
+	padding-top: 0;
+}
+
+header li:last-child {
+	padding-bottom: 0;
+}
+
+article {
+	display: inline-block;
+	line-height: 1.5em;
+	padding: 6em 12em 6em 0;
+	max-width: 50%;
+	min-width: 664px;
+	vertical-align: top;
+	white-space: normal;
+}
+
+article nav {
+	color: #cccccc;
+	position: absolute;
+	top: 4em;
+}
+
+article nav a {
 	color: inherit;
+}
+
+article h1 {
+	color: #222;
+	font-size: 2em;
+	line-height: 1em;
+	padding: 0 0 .75em 0;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+	line-height: 1.5em;
+	font-family: 'Libre Baskerville', serif;
+}
+
+h2, h3 {
+	font-weight: normal;
+	padding: 1.2em 0 .8em 0;
+}
+
+h2 {
+	font-size: 1.6818em;
+}
+
+h3 {
+	font-size: 1.4142em;
 }
 
 .terminal {
@@ -63,7 +147,7 @@ header a {
 }
 
 .php .comment {
-	color: #222;
+	color: #111;
 }
 
 .file {
@@ -86,7 +170,7 @@ dl.file dt {
 	-webkit-border-radius: .75em .75em 0 0;
 	border-radius: .75em .75em 0 0;
 
-	color: #222;
+	color: #111;
 	padding: .375em 1.5em;
 }
 
@@ -203,7 +287,7 @@ ul.list li {
 	-webkit-box-shadow: 0 3px 3px #cccccc;
 	box-shadow: 0 3px 3px #cccccc;
 
-	color: #222;
+	color: #111;
 	display: inline-block;
 	line-height: 1em;
 	margin: 1.5em 0;
@@ -282,7 +366,7 @@ a[href].download:hover, a[href].download:active {
 }
 
 .tabs input:checked + label {
-	color: #222;
+	color: #111;
 	border: 1px solid #ddd;
 	border-top: 2px solid orange;
 	border-bottom: 1px solid #fff;
@@ -340,7 +424,7 @@ a[href]:hover, a[href]:active {
 
 code {
 	display: block;
-	color: #222;
+	color: #111;
 	font-family: 'Inconsolata', monospace;
 	line-height: 1.125em;
 	overflow: auto;
@@ -353,29 +437,4 @@ img {
 
 p {
 	padding: .5em 0;
-}
-
-h1, h2, h3 {
-	color: #221122;
-	font-weight: normal;
-	padding: 1.2em 0 .8em 0;
-}
-
-h1, h2, h3 {
-	font-family: 'Libre Baskerville', serif;
-	font-weight: normal;
-	line-height: 1.5em;
-}
-
-h1 {
-	font-size: 2em;
-	padding: 0 0 .5em 0;
-}
-
-h2 {
-	font-size: 1.6818em;
-}
-
-h3 {
-	font-size: 1.4142em;
 }

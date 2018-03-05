@@ -1,8 +1,6 @@
 <ul>
 	<li><:link "Why?" "why/":></li>
-	<li>Get started
-<:include "get-started/.menu":>
-	</li>
-	<li><:link "Reference" "reference/":></li>
+	<li><:include "get-started/.menu":></li>
 	<li><:link "Contact" "contact/":></li>
+	<li><:link "Reference" "reference/":></li>
 </ul>

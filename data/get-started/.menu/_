@@ -1,5 +1,5 @@
-<ul>
+<ol>
 	<li><:link "Install Lens" "get-started/install-lens/":></li>
 	<li><:link "Write a test" "get-started/write-a-test/":></li>
-	<li><:link "See metrics" "get-started/see-metrics/":></li>
-</ul>
+	<li><:link "See results" "get-started/see-metrics/":></li>
+</ol>
