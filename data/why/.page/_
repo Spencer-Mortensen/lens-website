@@ -1,28 +1,17 @@
-<h3>Lens is simple</h3>
+<h3>Be more productive</h3>
 
 <p>In most frameworks, unit tests are a mix of framework code and the code being tested.
-Lens simplifies things by <i>eliminating the framework code</i>.
-Lens reads the section headings (e.g. “// Test”) to assemble a working unit test.</p>
+Lens simplifies things by eliminating the framework code.
+<b>Lens eliminates over 50% of the work of writing unit tests.</b></p>
 
-<div class="porthole">
-	<pre><code>// Test
-$x = 1 + 1;
+<p>Lens tests are easy to read and quick to write.
+See for yourself!
+Take a look at some of the <:link "unit tests" "get-started/write-a-test/":> to see how simple Lens really is.</p>
 
-// Output
-$x = 2;</code></pre>
-</div>
 
-<p>That’s right: There is no framework code to learn!
-That simplicity gives you get a permanent productivity boost.
-Lens gets out of your way and lets you focus on your project. What could be nicer than that?</p>
+<h3>Catch more issues</h3>
 
-<h3>Lens catches everything</h3>
-
-<p>In most framework, only your assertions catch issues, while everything else goes unchecked.
-Lens compares the full state of the program before and after the test has run, which causes Lens to catch <i>everything</i>—a surprise global variable, a stray echo statement, a fatal error—<i>everything</i>.
-It’s the only way you can sleep at night.</p>
-
-<!--<p>Some things can never be undone, such as a constant definition or a fatal error:
-In other unit-testing frameworks, these things “bleed through” to affect your remaining tests.
-Lens protects you by running all of your tests in parallel, with each test in its own isolated process.
-Lens guarantees test isolation.</p>-->
+<p>Assertion-based frameworks can only catch the very specific issues that you explicitly check.
+Lens checks all of the side effects from running your source code.
+As a result, Lens catches everything—fatal errors, exceptions, changes to global variables, surprise echo statements—literally everything that can go wrong.
+<b>Lens catches everything, always and automatically.</b></p>
