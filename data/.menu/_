@@ -2,5 +2,4 @@
 	<li><:link "Why?" "why/":></li>
 	<li><:include "get-started/.menu":></li>
 	<li><:link "Contact" "contact/":></li>
-	<li><:link "Reference" "reference/":></li>
 </ul>

@@ -1,12 +1,14 @@
-<ul>
-	<li><a href="#issues">Issues</a></li>
-	<li><a href="#news">Announcements</a></li>
-	<li><a href="#author">Author</a></li>
-</ul>
+<p>Lens was created by Spencer Mortensen, a senior software engineer living in Boston, Massachusetts.
+Feel free to send him an email.</p>
+
+<dl class="contact">
+	<dt>Name:</dt><dd class="name">Spencer Mortensen</dd>
+	<dt>Email:</dt><dd class="email"><img width="152" height="17" style="position:relative; top:4px" src="email.jpg" alt="Spencer's email address"></dd>
+</dl>
 
 <h2 id="issues">Issues</h2>
 
-<p>You can submit a bug report or a feature request through the <a href="https://github.com/spencer-mortensen/lens/issues">Issues</a> page.</p>
+<p>You can submit a bug report, or request a feature, through the <a href="https://github.com/spencer-mortensen/lens/issues">Issues</a> page.</p>
 
 <h2 id="news">Announcements</h2>
 
@@ -21,12 +23,3 @@
 	<input type="submit" name="submit" value="Submit">
 </form>
 
-<h2 id="author">Author</h2>
-
-<p>Lens was created by Spencer Mortensen, a senior software engineer living in Boston, Massachusetts.
-Feel free to send him an email.</p>
-
-<dl class="contact">
-	<dt>Name:</dt><dd class="name">Spencer Mortensen</dd>
-	<dt>Email:</dt><dd class="email"><img width="152" height="17" style="position:relative; top:4px" src="email.jpg" alt="Spencer's email address"></dd>
-</dl>

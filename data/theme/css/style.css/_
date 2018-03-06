@@ -16,7 +16,7 @@ body {
 header {
 	display: inline-block;
 	line-height: 1.5em;
-	padding: 6em;
+	padding: 6em 6em 6em 6em;
 	position: -webkit-sticky;
 	position: -moz-sticky;
 	position: -ms-sticky;
@@ -34,13 +34,13 @@ header h1 a {
 	color: #cccccc;
 	display: inline-block;
 	background-repeat: no-repeat;
-	background-size: 64px 64px; /* TODO: use em units */
-	background-position: top center;
+	background-size: 3em 3em;
+	background-position: top .75em center;
 	background-image: url('/theme/images/lens.svg');
 	font-family: 'Montserrat', serif;
 	font-weight: normal;
-	padding: 72px 12px 0 12px;
-	margin: 0 -12px 3em -12px;
+	padding: 4.5em .75em .75em .75em;
+	margin: -.75em -.75em 2.25em -.75em;
 	text-transform: uppercase;
 	letter-spacing: .3333em;
 }
@@ -96,13 +96,13 @@ article {
 	white-space: normal;
 }
 
-article nav {
+#breadcrumbs {
 	color: #cccccc;
 	position: absolute;
 	top: 4em;
 }
 
-article nav a {
+#breadcrumbs a {
 	color: inherit;
 }
 
@@ -155,6 +155,7 @@ h3 {
 	-webkit-border-radius: .75em;
 	border-radius: .75em;
 	display: table;
+	width: 100%;
 }
 
 dl.file dt {

@@ -64,16 +64,9 @@ $b = 0;
 throw new RangeException();</code></dd>
 </dl>
 
-<p>And we’ll add an autoloader stub, in case you need it:</p>
+<p><a href="Class.zip" class="download">Download this example</a></p>
 
-<dl class="file">
-	<dt>lens/autoload.php</dt>
-	<dd><code>&lt;?php
-
-require dirname(__DIR__) . '/src/Math.php';</code></dd>
-</dl>
-
-<p>Now run Lens to see the results:</p>
+<p>Now run the <:link "Lens executable" "reference/executable/":> to see the results:</p>
 
 <code class="terminal">lens
 # Passed tests: 3</code>

@@ -1,5 +1,5 @@
 <ul>
-	<li><:link "Organization" "reference/organization/":></li>
-	<li><:link "Writing Tests" "reference/tests-file/":></li>
 	<li><:link "Lens executable" "reference/executable/":></li>
+	<li><:link "Organization" "reference/organization/":></li>
+	<li><:link "Tests file syntax" "reference/tests-file/":></li>
 </ul>

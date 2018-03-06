@@ -1,4 +1,2 @@
 <p>Lens is a unit-testing framework for PHP with readable tests that catch everything.
-You get a command-line tool that you can run after you’ve refactored your code, so you can see right away if anything is broken or untested.</p>
-
-<p>Lens is unlike any other unit-testing framework—and its users absolutely <i>love</i> it!</p>
+Lens is unlike any other unit-testing framework—and its users absolutely <i>love</i> it!</p>

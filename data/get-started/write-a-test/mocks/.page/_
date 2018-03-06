@@ -69,17 +69,9 @@ $output = "Hello Ann, it's Saturday today!";
 <p>Did you see how we used a comment to provide the expected behavior for each function call?
 That’s all there is to it!</p>
 
-<p>Let’s add an autoloader stub, in case you need it:</p>
+<p><a href="Mocks.zip" class="download">Download this example</a></p>
 
-<dl class="file">
-    <dt>lens/autoload.php</dt>
-    <dd><code>&lt;?php
-
-require dirname(__DIR__) . '/src/Greeter.php';
-require dirname(__DIR__) . '/src/Person.php';</code></dd>
-</dl>
-
-<p>Now run Lens to see the results:</p>
+<p>Now run the <:link "Lens executable" "reference/executable/":> to see the results:</p>
 
 <code class="terminal">lens
 # Passed tests: 1</code>

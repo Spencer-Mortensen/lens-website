@@ -17,7 +17,7 @@
 	<h1><:link "Lens" "":></h1>
 	<nav><:include ".menu":></nav>
 </header><article>
-<nav><a href="/">Lens</a></nav>
+<nav id="breadcrumbs"><a href="/">Lens</a></nav>
 <h1><:include "<:path:>.title":></h1>
 
 <:include "<:path:>.page":>
