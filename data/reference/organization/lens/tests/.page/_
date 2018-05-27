@@ -1,3 +1,3 @@
-<nav id="organization"><:include "reference/organization/.menu":></nav>
+<nav id="organization"><:include "reference/organization/.menu/":></nav>
 
-<p>This directory is your place to <:link "write unit tests" "get-started/write-a-test":>.</p>
+<p>This directory is your place to <a href="<:url "get-started/write-a-test/":>">write unit tests</a>.</p>

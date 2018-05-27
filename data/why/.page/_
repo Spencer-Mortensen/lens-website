@@ -6,7 +6,7 @@ Lens simplifies things by eliminating the framework code.
 
 <p>Lens tests are easy to read and quick to write.
 See for yourself!
-Take a look at some of the <:link "unit tests" "get-started/write-a-test/":> to see how simple Lens really is.</p>
+Take a look at some of the <a href="<:url "get-started/write-a-test/":>">unit tests</a> to see how simple Lens really is.</p>
 
 
 <h3>Catch more issues</h3>

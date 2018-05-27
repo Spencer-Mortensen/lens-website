@@ -1,4 +1,4 @@
-<nav id="organization"><:include "reference/organization/.menu":></nav>
+<nav id="organization"><:include "reference/organization/.menu/":></nav>
 
 <p>Composer automatically generates a “autoload.php” file.
 So, if you’re using Composer, then you’re all set!
@@ -43,4 +43,4 @@ call_user_func(function () {
 
 <p>When you next run Lens, your new autoload file will be automatically discovered.</p>
 
-<p>You can check your “<:link "settings.ini" "reference/organization/lens/settings.ini/":>” file to see which “autoload” path Lens is using.</p>
+<p>You can check your “<a href="<:url "reference/organization/lens/settings.ini/":>">settings.ini</a>” file to see which “autoload” path Lens is using.</p>

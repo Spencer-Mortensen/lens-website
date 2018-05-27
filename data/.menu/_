@@ -1,5 +1,5 @@
 <ul>
-	<li><:link "Why?" "why/":></li>
-	<li><:include "get-started/.menu":></li>
-	<li><:link "Contact" "contact/":></li>
+	<li><a href="<:url "why/":>">Why?</a></li>
+	<li><:include "get-started/.menu/":></li>
+	<li><a href="<:url "contact/":>">Contact</a></li>
 </ul>

@@ -64,9 +64,9 @@ $b = 0;
 throw new RangeException();</code></dd>
 </dl>
 
-<p><a href="Class.zip" class="download">Download this example</a></p>
+<p><a href="<:url "get-started/write-a-test/object-oriented/Class.zip":>" class="download">Download this example</a></p>
 
-<p>Now run the <:link "Lens executable" "reference/executable/":> to see the results:</p>
+<p>Now run the <a href="<:url "reference/executable/":>">Lens executable</a> to see the results:</p>
 
 <code class="terminal">lens
 # Passed tests: 3</code>
@@ -74,4 +74,4 @@ throw new RangeException();</code></dd>
 <p>Congratulations!
 You can test object-oriented code!</p>
 
-<p>Now let’s see what happens when we need a <:link "mock" "get-started/write-a-test/mocks/":>.</p>
+<p>Now let’s see what happens when we need a <a href="<:url "get-started/write-a-test/mocks/":>">mock</a>.</p>

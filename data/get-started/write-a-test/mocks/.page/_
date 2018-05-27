@@ -69,9 +69,9 @@ $output = "Hello Ann, it's Saturday today!";
 <p>Did you see how we used a comment to provide the expected behavior for each function call?
 That’s all there is to it!</p>
 
-<p><a href="Mocks.zip" class="download">Download this example</a></p>
+<p><a href="<:url "get-started/write-a-test/mocks/Mocks.zip":>" class="download">Download this example</a></p>
 
-<p>Now run the <:link "Lens executable" "reference/executable/":> to see the results:</p>
+<p>Now run the <a href="<:url "reference/executable/":>">Lens executable</a> to see the results:</p>
 
 <code class="terminal">lens
 # Passed tests: 1</code>
@@ -81,4 +81,4 @@ You’re able to mock built-in functions and external classes!</p>
 
 <p>And that was the <i>entire learning curve</i> for Lens.
 Now you can test anything.
-All that’s left is to write more unit tests and <:link "watch your metrics climb" "get-started/see-metrics/":>.</p>
+All that’s left is to write more unit tests and <a href="<:url "get-started/see-metrics/":>">watch your metrics climb</a>.</p>

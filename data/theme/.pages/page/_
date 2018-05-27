@@ -4,23 +4,23 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title><:include "<:path:>.title":> | Lens</title>
-	<link href="/theme/css/style.css" rel="stylesheet" type="text/css">
+	<title><:include "<:path:>.title/":> | Lens</title>
+	<link href="<:url "theme/css/style.css":>" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Lora|Inconsolata|Montserrat|Libre+Baskerville" rel="stylesheet">
-	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="<:url "favicon.ico":>" rel="shortcut icon" type="image/x-icon">
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112827963-1"></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-112827963-1');</script>
 </head>
 
 <body>
 
 <header>
-	<h1><:link "Lens" "":></h1>
-	<nav><:include ".menu":></nav>
+	<h1><a href="<:url "":>">Lens</a></h1>
+	<nav><:include ".menu/":></nav>
 </header><article>
-<nav id="breadcrumbs"><a href="/">Lens</a></nav>
-<h1><:include "<:path:>.title":></h1>
+<nav id="breadcrumbs"><a href="<:url "":>">Lens</a></nav>
+<h1><:include "<:path:>.title/":></h1>
 
-<:include "<:path:>.page":>
+<:include "<:path:>.page/":>
 </article>
 
 </body>

@@ -1,4 +1,4 @@
-<nav id="organization"><:include "reference/organization/.menu":></nav>
+<nav id="organization"><:include "reference/organization/.menu/":></nav>
 
 <dl class="file">
 	<dt>lens/settings.ini</dt>
@@ -11,10 +11,10 @@ But feel free to change any of the settings!</p>
 
 <dl class="dictionary">
 	<dt id="src">src</dt>
-	<dd>The path to your <:link "src" "reference/organization/src/":> directory, relative to the project root.</dd>
+	<dd>The path to your <a href="<:url "reference/organization/src/":>">src</a> directory, relative to the project root.</dd>
 </dl>
 
 <dl class="dictionary">
 	<dt id="autoload">autoload</dt>
-	<dd>The path to your “<a href="/reference/organization/lens/autoload.php/">autoload.php</a>” file, relative to the project root.</dd>
+	<dd>The path to your “<a href="<:url "reference/organization/lens/autoload.php/":>">autoload.php</a>” file, relative to the project root.</dd>
 </dl>
