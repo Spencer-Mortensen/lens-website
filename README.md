@@ -5,12 +5,17 @@ This repository allows you to set up your own personal copy of the Lens website
 
 ## Installation
 
-Install the Apache webserver, if you haven't already:  
+Make sure that you've installed the Apache webserver:  
 ```bash
 apt-get install apache2 libapache2-mod-php php
 ```
 
-And make sure you have Composer installed:  
+And git:
+```bash
+apt-get install git
+```
+
+And Composer:  
 https://getcomposer.org/doc/00-intro.md
 
 Now clone the Lens website:  
@@ -20,13 +25,16 @@ cd lens.guide
 composer install
 ```
 
-Create the file "/var/www/lens/index.php":  
+And create the file "/var/www/lens/index.php":  
 <pre>&lt;?php<br>
+namespace Synerga;<br>
 $projectDirectory = <i>'/home/user/lens.guide'</i>;<br>
-$data = "{$projectDirectory}/data";
-require "{$projectDirectory}/vendor/spencer-mortensen/synerga/synerga.php";</pre>
+require "{$projectDirectory}/vendor/autoload.php";<br>
+$data = "{$projectDirectory}/data";<br>
+$synerga = new Synerga();
+$synerga->run('<:router:>');</pre>
 
-Be sure to use the correct path to your "lens.guide" directory!
+But be sure to use the correct path to your "lens.guide" directory!
 
 Create the file "/etc/apache2/sites-available/lens.conf":  
 <pre>&lt;VirtualHost *:80>
@@ -65,5 +73,5 @@ Add "lens" to your "/etc/hosts" file:
 127.0.0.1	localhost lens
 ```
 
-View your personal copy of the Lens website:  
+And view your personal copy of the Lens website:  
 [http://lens](http://lens)
