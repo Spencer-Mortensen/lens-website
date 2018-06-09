@@ -14,9 +14,9 @@ Here’s an example:</p>
 call_user_func(function () {
 	$projectDirectory = dirname(__DIR__);
 
-	$classes = array(
+	$classes = [
 		<i>'Example'</i> => <i>"{$projectDirectory}/src"</i>
-	);
+	];
 
 	foreach ($classes as $namespacePrefix => $libraryPath) {
 		$namespacePrefix .= '\\';
