@@ -43,4 +43,4 @@ call_user_func(function () {
 
 <p>When you next run Lens, your new autoload file will be automatically discovered.</p>
 
-<p>You can check your “<a href="<:url "support/organization/lens/settings.ini/":>">settings.ini</a>” file to see which “autoload” path Lens is using.</p>
+<p>You can check your “<a href="<:url "support/organization/lens/settings.yml/":>">settings.yml</a>” file to see which “autoload” path Lens is using.</p>

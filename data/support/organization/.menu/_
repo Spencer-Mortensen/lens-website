@@ -15,7 +15,7 @@
 						</ul>
 					</li>
 					<li><a href="<:url "support/organization/lens/autoload.php/":>">autoload.php</a></li>
-					<li><a href="<:url "support/organization/lens/settings.ini/":>">settings.ini</a></li>
+					<li><a href="<:url "support/organization/lens/settings.yml/":>">settings.yml</a></li>
 				</ul>
 			</li>
 		</ul>

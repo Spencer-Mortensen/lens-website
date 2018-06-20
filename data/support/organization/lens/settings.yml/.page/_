@@ -1,0 +1,44 @@
+<nav id="organization"><:include "support/organization/.menu/":></nav>
+
+<dl class="file">
+	<dt>lens/settings.yml</dt>
+	<dd><code>src = <i>'src'</i>
+autoload = <i>'vendor/autoload.php'</i>
+cache = <i>'lens/cache'</i>
+checkForUpdates = <i>true</i>
+mockClasses = <i>null</i>
+mockFunctions = <i>null</i></code></dd>
+</dl>
+
+<p>Lens will automatically create this settings file for you when you first run Lens.
+But feel free to change any of the settings!</p>
+
+<dl class="dictionary">
+	<dt id="src">src</dt>
+	<dd>The path to your “<a href="<:url "support/organization/src/":>">src</a>” directory, relative to the project root.</dd>
+</dl>
+
+<dl class="dictionary">
+	<dt id="autoload">autoload</dt>
+	<dd>The path to your “<a href="<:url "support/organization/lens/autoload.php/":>">autoload.php</a>” file, relative to the project root.</dd>
+</dl>
+
+<dl class="dictionary">
+	<dt id="cache">cache</dt>
+	<dd>The path to your “<a href="<:url "support/organization/lens/cache/":>">cache</a>” directory, relative to the project root.</dd>
+</dl>
+
+<dl class="dictionary">
+	<dt id="checkForUpdates">checkForUpdates</dt>
+	<dd>If <samp>true</samp>, Lens will let you know when it’s time to upgrade.</dd>
+</dl>
+
+<dl class="dictionary">
+	<dt id="mockClasses">mockClasses</dt>
+	<dd>A list of classes that Lens should mock.</dd>
+</dl>
+
+<dl class="dictionary">
+	<dt id="mockFunctions">mockFunctions</dt>
+	<dd>A list of functions that Lens should mock.</dd>
+</dl>
