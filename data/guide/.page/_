@@ -204,3 +204,9 @@ But we leave that choice to you.</p>
 
 <h2>Integrate with your tools</h2>
 
+<nav class="icons">
+<ul>
+	<li><a href="."><:include "theme/images/travis.svg":>Travis CI</a></li>
+	<li><a href="."><:include "theme/images/codecov.svg":>Codecov</a></li>
+</ul>
+</nav>
