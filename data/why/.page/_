@@ -24,3 +24,10 @@ Assertion-based frameworks won’t check every side effect.
 
 
 <h2>You want 100%</h2>
+
+<p>In almost every codebase, there is <i>some</i> code that goes untested.
+Usually, it’s the controller or the data-access layer.
+Even with partial mocks, and considerable effort, there is some code that escapes testing.</p>
+
+<p>With most unit-testing frameworks, the best you can hope for is <i>almost</i> or <i>good enough</i>.
+<b>With Lens, you can get 100%.</b></p>
