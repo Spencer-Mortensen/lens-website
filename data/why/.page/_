@@ -1,17 +1,26 @@
-<h3>Be more productive</h3>
+<h2>Your time is valuable</h2>
 
-<p>In most frameworks, unit tests are a mix of framework code and the code being tested.
-Lens simplifies things by eliminating the framework code.
-<b>Lens eliminates over 50% of the work of writing unit tests.</b></p>
-
-<p>Lens tests are easy to read and quick to write.
-See for yourself!
-Take a look at some of the <a href="<:url "get-started/write-a-test/":>">unit tests</a> to see how simple Lens really is.</p>
+<p><b>Lens reduces the time spent unit testing by over 50%.</b>
+How many hours have you spent writing and testing code?
+Imagine what you could accomplish if <i>half</i> your time were returned to you.</p>
 
 
-<h3>Catch more issues</h3>
+<h2>You’re at risk</h2>
 
-<p>Assertion-based frameworks can only catch the very specific issues that you explicitly check.
-Lens checks all of the side effects from running your source code.
-As a result, Lens catches everything—fatal errors, exceptions, changes to global variables, surprise echo statements—literally everything that can go wrong.
-<b>Lens catches everything, always and automatically.</b></p>
+<p>Assertion-based frameworks only check the specific values in your assertions.
+<b>What about new side effects?</b>
+At any time, you could be bitten by:</p>
+
+<ul>
+	<li>a malicious system call buried in a merge request</li>
+	<li>a suppressed warning that could have revealed a big issue</li>
+	<li>a forgotten debugging statement that will now break your AJAX</li>
+	<li>a new pass-by-reference behavior that will overwrite your variables</li>
+</ul>
+
+<p>If it wasn’t explicitly asserted, <i>it didn’t get checked.</i>
+Assertion-based frameworks won’t check every side effect.
+<b>Lens will.</b></p>
+
+
+<h2>You want 100%</h2>

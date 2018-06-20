@@ -1,4 +1,0 @@
-<nav id="organization"><:include "reference/organization/.menu/":></nav>
-
-<p>Here are the various directories and files in a typical Lens project.
-Feel free to browse around!</p>

@@ -1,0 +1,22 @@
+h1 {
+	color: #111111;
+	font-family: 'Comfortaa', sans-serif;
+	font-size: 5em;
+	font-weight: bold;
+	letter-spacing: 0em;
+	line-height: 2em;
+	padding: .5em 0 0 0;
+	text-align: center;
+	text-transform: lowercase;
+}
+
+h1 img {
+	padding-right: .25em;
+}
+
+p {
+	font-size: 2em;
+	line-height: 1.25em;
+	padding: 0;
+	text-align: center;
+}

@@ -1,3 +1,0 @@
-<nav id="organization"><:include "reference/organization/.menu/":></nav>
-
-<p>This directory is your place to <a href="<:url "get-started/write-a-test/":>">write unit tests</a>.</p>

@@ -1,0 +1,84 @@
+<p>Imagine that we’re testing a class from your project that looks like this:</p>
+
+<dl class="file">
+	<dt>src/Greeter.php</dt>
+	<dd><code>&lt;?php
+
+namespace Example;
+
+class Greeter
+{
+    public function greet(Person $person)
+    {
+        $name = $person-&gt;getName();
+        $day = date('l', time());
+
+        return "Hello {$name}, it's {$day} today!";
+    }
+}</code></dd>
+</dl>
+
+<dl class="file">
+	<dt>src/Person.php</dt>
+	<dd><code>&lt;?php
+
+namespace Example;
+
+class Person
+{
+    public function getName()
+    {
+        return null;
+    }
+}</code></dd>
+</dl>
+
+<p>This looks like a real challenge because:</p>
+
+<ul class="list">
+	<li>The “Person” class hasn’t been implemented yet.
+	And, even if it had, we wouldn’t want the test results for our “Greeter” class to change based on the implementation details of a third-party class.</li>
+	<li>The “time()” function causes the greeting text to change regularly.
+	(Other built-in functions, such as “shell_exec” and “file_get_contents,” will be similarly dangerous.)</li>
+</ul>
+
+<p>But! We are using Lens, so none of this is a problem for us.</p>
+
+<p>We’ll simply list the external interactions that we’re expecting:</p>
+
+<dl class="file">
+	<dt>lens/tests/Greeter.php</dt>
+	<dd><code>&lt;?php
+
+namespace Example;
+
+// Test
+$greeter = new Greeter();
+$output = $greeter-&gt;greet($person);
+
+// Input
+$person = new Person();
+
+// Output
+$person-&gt;getName(); // return 'Ann';
+time(); // return 1518302651;
+$output = "Hello Ann, it's Saturday today!";
+</code></dd>
+</dl>
+
+<p>Did you see how we used a comment to provide the expected behavior for each function call?
+That’s all there is to it!</p>
+
+<p><a href="<:url "guide/test/mocks/Mocks.zip":>" class="download">Download this example</a></p>
+
+<p>Now run the <a href="<:url "support/executable/":>">Lens executable</a> to see the results:</p>
+
+<code class="terminal">lens
+# Passed tests: 1</code>
+
+<p>Congratulations!
+You’re able to mock built-in functions and external classes!</p>
+
+<p>And that was the <i>entire learning curve</i> for Lens.
+Now you can test anything.
+All that’s left is to write more unit tests and <a href="<:url "guide/see-metrics/":>">watch your metrics climb</a>.</p>

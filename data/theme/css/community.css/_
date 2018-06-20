@@ -1,0 +1,20 @@
+.contact {
+	background: url('/community/spencer.jpg') center 0 no-repeat;
+	display: block;
+	margin: 3em .75em 1.5em .75em;
+	padding-top: 140px;
+	text-align: center;
+}
+
+.contact dt {
+	position: absolute;
+	left: -96em;
+}
+
+.contact dd {
+	line-height: 1.5em;
+}
+
+.contact dd.name {
+	font-weight: bold;
+}

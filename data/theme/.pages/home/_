@@ -4,10 +4,9 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title><:include "<:path:>.title/":> | Lens</title>
+	<title>Lens: the unit-testing framework for PHP that needs no assertions</title>
 	<link href="<:url "theme/css/style.css":>" rel="stylesheet" type="text/css">
-	<link href="<:url "theme/css/install.css":>" rel="stylesheet" type="text/css">
-	<link href="<:url "theme/css/community.css":>" rel="stylesheet" type="text/css">
+	<link href="<:url "theme/css/home.css":>" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa:400|Montserrat|Inconsolata" rel="stylesheet">
 	<link href="<:url "favicon.ico":>" rel="shortcut icon" type="image/x-icon">
 <!--	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112827963-1"></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-112827963-1');</script> -->
@@ -18,9 +17,9 @@
 <header><nav id="menu"><:include ".menu/":></nav></header>
 
 <article>
-<h1><:include "<:path:>.title/":></h1>
+<h1><img src="/theme/images/lens.svg" width="78px" height="78px">Lens</h1>
 
-<:include "<:path:>.page/":>
+<p>The unit-testing framework for PHP that needs no assertions</p>
 </article>
 
 </body>

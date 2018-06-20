@@ -1,127 +1,71 @@
-/* 1024 */
-/* 336 + 906 <= 1280 */
+* {
+	margin: 0;
+	padding: 0;
+}
 
 html {
-	font-size: 20px;
-}
-
-body {
-	background-color: #fff;
-	color: #111111;
-	font-family: 'Libre Baskerville', serif;
-	font-family: 'Lora', serif;
-	white-space: nowrap;
-}
-
-header {
-	display: inline-block;
-	line-height: 1.5em;
-	padding: 6em 6em 6em 6em;
-	position: -webkit-sticky;
-	position: -moz-sticky;
-	position: -ms-sticky;
-	position: -o-sticky;
-	position: sticky;
-	top: 0;
-	vertical-align: top;
-}
-
-header h1 {
 	font-size: 18px;
 }
 
-header h1 a {
-	color: #cccccc;
-	display: inline-block;
-	background-repeat: no-repeat;
-	background-size: 3em 3em;
-	background-position: top .75em center;
-	background-image: url('/theme/images/lens.svg');
-	font-family: 'Montserrat', serif;
-	font-weight: normal;
-	padding: 4.5em .75em .75em .75em;
-	margin: -.75em -.75em 2.25em -.75em;
-	text-transform: uppercase;
-	letter-spacing: .3333em;
+body {
+	background-color: #ffffff;
+	color: #222222;
+	font-family: 'Montserrat',sans-serif;
+	margin: 0 auto;
+	min-width: 540px;
+	max-width: 1080px;
+	width: 75%;
 }
 
-header h1 a[href] {
-	font-family: 'Montserrat', serif;
+#menu {
+	margin-top: .25em;
+	white-space: nowrap;
 }
 
-header nav {
-	font-size: 18px; /* TODO: use typographic scale */
-	min-width: 7.5em;
-}
-
-header a {
-	color: #111;
-	font-family: 'Libre Baskerville', serif;
-	font-weight: bold;
-}
-
-header a[href] {
-	font-family: 'Lora', serif;
-	font-weight: normal;
-}
-
-header ul {
+#menu ul {
+	display: block;
 	list-style-type: none;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #eeeeee;
 }
 
-header ol {
-	list-style-position: inside;
+#menu li {
+	display: inline-block;
 }
 
-header li {
-	line-height: 1em;
-	padding: .5em 0;
+#menu a {
+	border-bottom: none;
+	color: #222222;
+	display: inline-block;
+	height: 3em;
+	line-height: 3em;
+	margin-bottom: 0;
+	padding: 0 .75em;
+	text-transform: lowercase;
 }
 
-header li:first-child {
-	padding-top: 0;
-}
-
-header li:last-child {
-	padding-bottom: 0;
+#menu a[href="."] {
+	margin-bottom: -3px;
+	border-bottom: 3px solid #222222;
 }
 
 article {
-	display: inline-block;
-	line-height: 1.5em;
-	padding: 6em 12em 6em 0;
-	max-width: 50%;
-	min-width: 664px;
-	vertical-align: top;
-	white-space: normal;
-}
-
-#breadcrumbs {
-	color: #cccccc;
-	position: absolute;
-	top: 4em;
-}
-
-#breadcrumbs a {
-	color: inherit;
-}
-
-article h1 {
-	color: #222;
-	font-size: 2em;
-	line-height: 1em;
-	padding: 0 0 .75em 0;
+	padding-bottom: 3em;
 }
 
 h1, h2, h3 {
+	font-family: 'Comfortaa', sans-serif;
 	font-weight: normal;
+	letter-spacing: .0625em;
 	line-height: 1.5em;
-	font-family: 'Libre Baskerville', serif;
 }
 
-h2, h3 {
-	font-weight: normal;
-	padding: 1.2em 0 .8em 0;
+h1, h2, h3 {
+	padding: 1.5em 0 .5em 0;
+}
+
+h1 {
+	font-size: 2em;
 }
 
 h2 {
@@ -131,6 +75,44 @@ h2 {
 h3 {
 	font-size: 1.4142em;
 }
+
+a {
+	text-decoration: none;
+}
+
+a[href]:hover, a[href]:active {
+	text-decoration: underline;
+}
+
+code {
+	display: block;
+	color: #222222;
+	font-family: 'Inconsolata', monospace;
+	line-height: 1.125em;
+	overflow: auto;
+	white-space: pre;
+}
+
+img {
+	border: none;
+}
+
+article p {
+	padding: .5em 0;
+	line-height: 1.5em;
+}
+
+article ul {
+	padding-left: .25em;
+	list-style-position: inside;
+}
+
+article li {
+	line-height: 1.5em;
+}
+
+
+/* Code */
 
 .terminal {
 	background-color: #113;
@@ -195,7 +177,7 @@ dl.dictionary dt {
 	display: block;
 }
 
-dl.dictionary dt:after {
+dl.dictionary dt::after {
 	content: ":"
 }
 
@@ -232,43 +214,9 @@ ul.list li {
 	box-shadow: 0 0 4px #eeffee;
 }
 
-.photo {
-	-moz-border-radius: .75em;
-	-webkit-border-radius: .75em;
-	border-radius: .75em;
 
-	border: .25em solid #dddddd;
 
-	-moz-box-shadow: 0 3px 3px #cccccc;
-	-webkit-box-shadow: 0 3px 3px #cccccc;
-	box-shadow: 0 3px 3px #cccccc;
-
-	overflow: hidden;
-	display: inline-block;
-	vertical-align: top;
-}
-
-#coverage-directory {
-	background-color: #ffffff;
-	display: block;
-	margin: 1.5em 0;
-	width: 217px;
-}
-
-#coverage-directory img {
-	padding: 24px;
-}
-
-#coverage-file {
-	display: block;
-	margin: 1.5em 0;
-	width: 332px;
-	text-align: center;
-}
-
-#coverage-file img {
-	padding: 48px 24px;
-}
+/* Download */
 
 .download {
 	background: #fafafa;
@@ -324,30 +272,59 @@ a[href].download:hover, a[href].download:active {
 	margin: 1.5625em 0 1.4375em 0;
 }
 
-/* TODO: move this to the style sheet for the contact page */
-.contact {
-	background: url('../images/spencer.jpg') center 0 no-repeat;
-	display: block;
-	margin: 3em .75em 1.5em .75em;
-	padding-top: 140px;
+/* Icon Navigation */
+
+.icons ul {
+	list-style-type: none;
+}
+
+.icons li {
+	display: inline-block;
+	padding: 0 .75em;
+}
+
+.icons a {
+	color: #222222;
+	display: inline-block;
+	font-size: 1.1892em;
+	line-height: 1.5em;
+	margin: .75em 0;
 	text-align: center;
 }
 
-.contact dt {
-	position: absolute;
-	left: -96em;
+.icons a:hover {
+	color: #000000;
 }
 
-.contact dd {
-	line-height: 1.5em;
+.icons svg {
+	display: block;
+	height: 64px;
+	margin: 0 auto;
+	padding-right: .375em;
+	vertical-align: middle;
+	width: 64px;
 }
 
-.contact dd.name {
-	font-weight: bold;
+.icons .light-fill {
+	fill: #ffffff;
 }
+
+.icons .dark-fill {
+	fill: #222222;
+}
+
+.icons a:hover .dark-fill {
+	fill: #000000;
+}
+
+
+/* Tab Selection */
 
 .tabs {
-	padding: 0 0 .75em 0;
+	border-top: 1px solid #cccccc;
+	margin-top: 3.75em;
+	padding-top: .75em;
+	position: relative;
 }
 
 .tabs input {
@@ -355,22 +332,53 @@ a[href].download:hover, a[href].download:active {
 }
 
 .tabs label {
-	display: inline-block;
-	margin: 0 0 -1px;
-	padding: 15px 25px;
-	font-weight: 600;
+	border-top: 2px solid #ffffff;
+	border-right: 1px solid #ffffff;
+	border-bottom: 1px solid #cccccc;
+	border-left: 1px solid #ffffff;
+	box-sizing: border-box;
+	color: #cccccc;
+	display: block;
+	height: 3em;
+	line-height: 3em;
+	position: absolute;
 	text-align: center;
-	vertical-align: middle;
-	color: #ccc;
-	border: 1px solid transparent;
-	border-top: 2px solid #fff;
+	top: -3em;
+	width: 8em;
+}
+
+.tabs div:nth-child(1) label {
+	left: 0;
+}
+
+.tabs div:nth-child(2) label {
+	left: 8em;
+}
+
+.tabs div:nth-child(3) label {
+	left: 16em;
 }
 
 .tabs input:checked + label {
-	color: #111;
-	border: 1px solid #ddd;
-	border-top: 2px solid orange;
-	border-bottom: 1px solid #fff;
+	border-top: 2px solid #333333;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #ffffff;
+	border-left: 1px solid #cccccc;
+	color: #222222;
+	cursor: auto;
+	text-decoration: none;
+}
+
+.tabs svg {
+	padding-right: .375em;
+}
+
+.tabs section {
+	display: none;
+}
+
+.tabs input:checked ~ section {
+	display: block;
 }
 
 .tabs label:hover {
@@ -378,64 +386,30 @@ a[href].download:hover, a[href].download:active {
 	text-decoration: underline;
 }
 
-.tabs input:checked + label {
-	cursor: auto;
-	text-decoration: none;
+.tabs input:checked ~ label {
+	font-weight: bold;
 }
 
-.tabs section {
-	display: none;
-	padding: 20px 0 0;
-	border-top: 1px solid #ddd;
+.tabs .light-fill {
+	fill: #ffffff;
 }
 
-#windows:checked ~ #content1, #linux:checked ~ #content2, #mac:checked ~ #content3 {
-	display: block;
+.tabs input ~ label .dark-fill {
+	fill: #cccccc;
 }
 
-.tabs label svg {
-	margin-right: .375em;
+.tabs input:checked ~ label .dark-fill {
+	fill: #222222;
 }
 
-.tabs label.linux svg {
+.tabs .light-stroke {
+	stroke: #ffffff;
 }
 
-#organization {
-	margin: 0 0 .75em 0;
-	display: inline-block;
+.tabs input ~ label .dark-stroke {
+	stroke: #cccccc;
 }
 
-#organization ul {
-	list-style-type: none;
-	padding-left: 1.5em;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-}
-
-a {
-	text-decoration: none;
-}
-
-a[href]:hover, a[href]:active {
-	text-decoration: underline;
-}
-
-code {
-	display: block;
-	color: #111;
-	font-family: 'Inconsolata', monospace;
-	line-height: 1.125em;
-	overflow: auto;
-	white-space: pre;
-}
-
-img {
-	border: none;
-}
-
-p {
-	padding: .5em 0;
+.tabs input:checked ~ label .dark-stroke {
+	stroke: #222222;
 }

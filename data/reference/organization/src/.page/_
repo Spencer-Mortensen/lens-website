@@ -1,6 +1,0 @@
-<nav id="organization"><:include "reference/organization/.menu/":></nav>
-
-<p>This directory contains the source code for your project.</p>
-
-<p>Of course, you can put your source code elsewhere if you prefer.
-Simply open your “<a href="<:url "reference/organization/lens/settings.ini/":>">settings.ini</a>” file and update the “src” path.</p>

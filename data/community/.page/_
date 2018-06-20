@@ -1,0 +1,17 @@
+<nav class="icons">
+<ul>
+	<li><a href="https://gitter.im/php-lens/Lobby"><:include "theme/images/chat.svg/":>Chat</a></li>
+	<li><a href="https://twitter.com/PhpLens"><:include "theme/images/twitter.svg/":>Get tips</a></li>
+	<li><a href="<:url "community/big-announcements/":>"><:include "theme/images/email.svg/":>Hear the big announcements</a></li>
+</ul>
+</nav>
+
+<h2 id="people">People</h2>
+
+<p>Lens was created by Spencer Mortensen, a senior software engineer living in Boston, Massachusetts.
+Feel free to send him an email.</p>
+
+<dl class="contact">
+	<dt>Name:</dt><dd class="name">Spencer Mortensen</dd>
+	<dt>Email:</dt><dd class="email"><img width="152" height="17" style="position:relative; top:4px" src="<:url "community/email.jpg":>" alt="Spencer's email address"></dd>
+</dl>

@@ -1,0 +1,46 @@
+<nav id="organization"><:include "support/organization/.menu/":></nav>
+
+<p>Composer automatically generates a “autoload.php” file.
+So, if you’re using Composer, then you’re all set!
+There’s nothing you need to do.</p>
+
+<p>If you’re <i>not</i> using Composer, or if you’d like a faster autoloader, then go ahead and create this “lens/autoload.php” file.
+Here’s an example:</p>
+
+<dl class="file">
+	<dt>lens/autoload.php</dt>
+	<dd><code>&lt;?php
+
+call_user_func(function () {
+	$projectDirectory = dirname(__DIR__);
+
+	$classes = [
+		<i>'Example'</i> => <i>"{$projectDirectory}/src"</i>
+	];
+
+	foreach ($classes as $namespacePrefix => $libraryPath) {
+		$namespacePrefix .= '\\';
+		$namespacePrefixLength = strlen($namespacePrefix);
+
+		$autoloader = function ($class) use ($namespacePrefix, $namespacePrefixLength, $libraryPath) {
+			if (strncmp($class, $namespacePrefix, $namespacePrefixLength) !== 0) {
+				return;
+			}
+
+			$relativeClassName = substr($class, $namespacePrefixLength);
+			$relativeFilePath = strtr($relativeClassName, '\\', '/') . '.php';
+			$absoluteFilePath = "{$libraryPath}/{$relativeFilePath}";
+
+			if (is_file($absoluteFilePath)) {
+				include $absoluteFilePath;
+			}
+		};
+
+		spl_autoload_register($autoloader);
+	}
+});</code></dd>
+</dl>
+
+<p>When you next run Lens, your new autoload file will be automatically discovered.</p>
+
+<p>You can check your “<a href="<:url "support/organization/lens/settings.ini/":>">settings.ini</a>” file to see which “autoload” path Lens is using.</p>

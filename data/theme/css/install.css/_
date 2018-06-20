@@ -1,0 +1,129 @@
+#guide {
+	margin-top: .75em;
+}
+
+#guide ol {
+	border-bottom: 2px solid #eeeeee;
+	counter-reset:li;
+	height: .75em;
+	list-style-type: none;
+	margin: 0 4.5em 0 4.5em;
+	position: relative;
+}
+
+#guide li {
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+	width: 9em;
+}
+
+#guide li:nth-child(1) {
+	left: 0;
+	margin: 1.75em 0 0 -4.5em;
+}
+
+#guide li:nth-child(2) {
+	left: 50%;
+	margin: 1.75em 0 0 -4.5em;
+}
+
+#guide li:nth-child(3) {
+	right: 0;
+	margin: 1.75em -4.5em 0 0;
+}
+
+#guide li:before {
+	background-color: #cccccc;
+	-moz-border-radius: .75em;
+	-webkit-border-radius: .75em;
+	border-radius: .75em;
+	color: #ffffff;
+	content:counter(li);
+	counter-increment:li;
+	display: inline-block;
+	left: 50%;
+	line-height: 1.5em;
+	margin-left: -.75em;
+	position: absolute;
+	text-align: center;
+	top: -1.75em;
+	width: 1.5em;
+}
+
+#guide a {
+	color: #cccccc;
+}
+
+#guide .active a {
+	color: #333333;
+}
+
+#guide .done a {
+	color: #003311;
+}
+
+#guide .done:before {
+	content: "\2714";
+	background-color: #006622;
+}
+
+#guide .active:before {
+	background-color: #333333;
+}
+
+#guide-install ul {
+	list-style-type: none;
+	border-bottom: 1px solid #cccccc;
+	margin-bottom: .75em;
+}
+
+#guide-install li {
+	display: inline-block;
+}
+
+#guide-install svg {
+	padding-right: .25em;
+}
+
+#guide-install .light-fill {
+	fill: #ffffff;
+}
+
+#guide-install .light-stroke {
+	stroke: #ffffff;
+}
+
+#guide-install a {
+	border-top: 2px solid #ffffff;
+	border-bottom: 1px solid #cccccc;
+	color: #cccccc;
+	display: inline-block;
+	margin-bottom: -1px;
+	padding: .75em 1em;
+}
+
+#guide-install a[href="."] {
+	border-top: 2px solid #222222;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #ffffff;
+	border-left: 1px solid #cccccc;
+	color: #222222;
+	font-weight: bold;
+}
+
+#guide-install a .dark-fill {
+	fill: #cccccc;
+}
+
+#guide-install a[href="."] .dark-fill {
+	fill: #222222;
+}
+
+#guide-install a .dark-stroke {
+	stroke: #cccccc;
+}
+
+#guide-install a[href="."] .dark-stroke {
+	stroke: #222222;
+}

@@ -1,0 +1,8 @@
+<p>Keep me informed when there is a really big announcement:</p>
+
+<form method="post" action="http://scripts.dreamhost.com/add_list.cgi" class="news">
+	<input type="hidden" name="list" value="lens">
+	<input type="hidden" name="domain" value="spencermortensen.com">
+	<label for="news-email">Email:</label> <input type="email" name="email" required placeholder="email@example.com" id="news-email">
+	<input type="submit" name="submit" value="Submit">
+</form>

@@ -1,0 +1,206 @@
+<p>This guide will get you using Lens in just a few minutes.</p>
+
+<h2>Install Lens</h2>
+
+<div class="tabs">
+	<div>
+		<input id="windows" name="os" type="radio">
+		<label for="windows"><:include "theme/images/windows.svg":>Windows</label>
+		<section>
+<p>You can download Lens with one command:</p>
+
+<code class="terminal">php -r "$file = 'C:\\Lens\\lens'; $url = 'http://lens.guide/lens'; @mkdir(dirname($file), 0755, true); copy(\"$url.phar\", $file); copy(\"$url.bat\", \"$file.bat\");"</code>
+
+<p>But you’re not done yet!
+You’ll also need to add Lens to your system path.</p>
+
+<p>First, open the “System Properties” dialog by running this command in the Windows shell:</p>
+
+<code class="terminal">SystemPropertiesAdvanced</code>
+
+<p>Now click on the “Environment Variables” button:
+Under the "System variables" section, find the “Path” value (you may need to scroll a bit) and add “<samp>;C:\Lens</samp>” to the end.</p>
+		</section>
+	</div>
+	<div>
+		<input id="linux" name="os" type="radio" checked>
+		<label for="linux"><:include "theme/images/ubuntu.svg":>Linux</label>
+		<section>
+<p>You can download Lens with one command:</p>
+
+<code class="terminal">sudo php -r '$file = "/usr/local/bin/lens"; copy("http://lens.guide/lens.phar", $file); chmod($file, 0755);'</code>
+		</section>
+	</div>
+	<div>
+		<input id="mac" name="os" type="radio">
+		<label for="mac"><:include "theme/images/mac.svg":>Mac</label>
+		<section>
+<p>You can download Lens with one command:</p>
+
+<code class="terminal">sudo php -r '$file = "/usr/local/bin/lens"; @mkdir(dirname($file), 0755, true); copy("http://lens.guide/lens.phar", $file); chmod($file, 0755);'</code>
+		</section>
+	</div>
+</div>
+
+<p>You can also get Lens through <a href="https://packagist.org/packages/lens/lens">Composer</a> or <a href="https://github.com/spencer-mortensen/lens">Git</a>.</p>
+
+
+<h2>Write a test</h2>
+
+<p>Here’s a simple test:</p>
+
+<dl class="file">
+	<dt>Math.php</dt>
+	<dd><code>&lt;?php
+
+// Test
+$x = 1 + 1;
+
+// Effect
+$x = 2;</code></dd>
+</dl>
+
+<p>Run Lens to see the results:</p>
+
+<code class="terminal">lens Math.php
+# Passed tests: 1</code>
+
+<p>Congratulations!
+You’ve written your first test!</p>
+
+<p>Hmm!
+What would happen if you were to change that expected effect in the Effect section to <i>something else?</i>
+Would Lens catch the discrepancy?</p>
+
+
+<h2>Write a test for your project</h2>
+
+<p>Now let’s test an <i>actual class</i> from your project.
+Suppose your source code looks something like this:</p>
+
+<dl class="file">
+	<dt>src/Math.php</dt>
+	<dd><code>&lt;?php
+
+namespace Example;
+
+use RangeException;
+
+class Math
+{
+    public function divide($m, $n)
+    {
+        if ($n === 0) {
+            throw new RangeException();
+        }
+
+        return $m / $n;
+    }
+}</code></dd>
+</dl>
+
+<p>Let’s write the unit tests:</p>
+
+<dl class="file">
+	<dt>lens/tests/Math.php</dt>
+	<dd><code>&lt;?php
+
+namespace Example;
+
+use RangeException;
+
+
+// Test
+$math = new Math();
+$c = $math-&gt;divide($a, $b);
+
+
+// Cause
+$a = 1;
+$b = 2;
+
+// Effect
+$c = 0.5;
+
+
+// Cause
+$a = 1;
+$b = 0;
+
+// Effect
+throw new RangeException();</code></dd>
+</dl>
+
+<p><a href="<:url "guide/test/object-oriented/Class.zip":>" class="download">Download this example</a></p>
+
+<p>Run Lens to see the results:</p>
+
+<code class="terminal">lens
+# Passed tests: 2</code>
+
+<p>Congratulations!
+You can test object-oriented code!</p>
+
+<p>You can repeat the same test with many different “Cause” and “Effect” sections, until you’re completely satisfied that the “Test” code is fully tested.</p>
+
+<p>Under the hood, Lens transforms each test case into code snippets like this:</p>
+
+<code>// Cause
+$a = 1;
+$b = 2;
+
+// Test
+$math = new Math();
+$c = $math-&gt;divide($a, $b);</code>
+
+<p>Lens runs all of these code snippets simultaneously, in parallel processes.
+This <i>guarantees</i> test independence.
+After the dust has settled, Lens checks that all of the expected side effects did indeed happen:</p>
+
+<code>// Effect
+$c = 0.5;</code>
+
+<p>If there were any <i>additional</i> or <i>missing</i> side effects, then Lens will fail the test and alert you.</p>
+
+<p>You can test anything this way.
+If you know what the side effects ought to be, then you can test it.
+For example, you can test code that:</p>
+
+<ul>
+	<li>runs the dangerous PHP functions (“shell_exec”)</li>
+	<li>instantiates objects internally</li>
+	<li>invokes external public static methods</li>
+	<li>calls raw functions using their absolute namespace prefixes</li>
+</ul>
+
+<p>Just list the side effects, and you’re done!</p>
+
+<p>Oh, and if the side effects ever grow to be too much?
+You can add an unclean class to the list of mocks in your configuration file:
+Lens will replace those classes with mock objects.
+That way, you can encapsulate messy side effects so they don’t leak through into your other tests.
+You’ll simply list the public method calls that you were expecting, instead of the deep side effects that would have been invoked if the code had been allowed to run live.</p>
+
+<p>In general, though, it’s helpful to let your classes run as live code, so you get the benefits of integration testing along with the benefits of unit testing.
+But we leave that choice to you.</p>
+
+
+<h2>See the results</h2>
+
+<p>Now that you’ve written some tests, a coverage directory has appeared:</p>
+
+<dl class="file">
+	<dt>lens/coverage/index.html</dt>
+	<dd><img width="169" height="71" src="<:url "guide/directory.png":>" alt="Code coverage: directory view"></dd>
+</dl>
+
+<dl class="file">
+	<dt>lens/coverage/Math/index.html</dt>
+	<dd><img width="284" height="327" src="<:url "guide/file.png":>" alt="Code coverage: file view"></dd>
+</dl>
+
+<p>Be sure to check out that “lens/coverage” directory in your web browser, since it’s rather useful!</p>
+
+
+<h2>Integrate with your tools</h2>
+

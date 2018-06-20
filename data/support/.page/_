@@ -1,0 +1,15 @@
+<nav class="icons">
+<ul>
+	<li><a href="https://github.com/spencer-mortensen/lens/issues"><:include "theme/images/bug.svg/":>Report a bug</a></li>
+	<li><a href="https://stackoverflow.com/questions/tagged/php+lens"><:include "theme/images/chat.svg/":>Ask for help</a></li>
+	<li><a href="https://github.com/spencer-mortensen/lens/issues"><:include "theme/images/feature.svg/":>Request a feature</a></li>
+</ul>
+</nav>
+
+<h2>I have a question about…</h2>
+
+<ul>
+	<li><a href="<:url "support/executable/":>">Lens executable</a></li>
+	<li><a href="<:url "support/organization/":>">Organization</a></li>
+	<li><a href="<:url "support/tests-file/":>">Tests file syntax</a></li>
+</ul>

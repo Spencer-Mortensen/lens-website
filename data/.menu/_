@@ -1,5 +1,1 @@
-<ul>
-	<li><a href="<:url "why/":>">Why?</a></li>
-	<li><:include "get-started/.menu/":></li>
-	<li><a href="<:url "contact/":>">Contact</a></li>
-</ul>
+<ul><li><a href="<:url "":>">Lens</a></li><li><a href="<:url "why/":>">Why</a></li><li><a href="<:url "guide/":>">Guide</a></li><li><a href="<:url "support/":>">Support</a></li><li><a href="<:url "community/":>">Community</a></li><li><a href="<:url "articles/":>">Articles</a></li></ul>
