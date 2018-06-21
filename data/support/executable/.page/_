@@ -11,16 +11,23 @@
 
 <h2>Reports</h2>
 
-<p>Lens can provide reports in different formats.
-This is mainly useful for integration with third-party tools:</p>
+<p>Lens can provide reports in different formats.</p>
+
+<p>Generate an issues report:</p>
+
+<code class="terminal">lens --issues=stdout</code>
+
+<p>Generate the HTML code-coverage directory:</p>
+
+<code class="terminal">lens --coverage="lens/coverage"</code>
 
 <p>Generate an <a href="https://en.wikipedia.org/wiki/XUnit">xUnit</a> report:</p>
 
-<code class="terminal">lens --report=xunit</code>
+<code class="terminal">lens --xunit="lens/xunit.xml"</code>
 
 <p>Generate a <a href="https://testanything.org/">TAP</a> report:</p>
 
-<code class="terminal">lens --report=tap</code>
+<code class="terminal">lens --tap="lens/tap.txt"</code>
 
 
 <h2>Version</h2>
