@@ -4,8 +4,8 @@ h1 {
 	font-size: 5em;
 	font-weight: bold;
 	letter-spacing: 0em;
-	line-height: 2em;
-	padding: .5em 0 0 0;
+	line-height: 1em;
+	padding: 1em 0 .5em 0;
 	text-align: center;
 	text-transform: lowercase;
 }
@@ -17,6 +17,7 @@ h1 img {
 p {
 	font-size: 2em;
 	line-height: 1.25em;
+	margin-top: -.625em;
 	padding: 0;
 	text-align: center;
 }
