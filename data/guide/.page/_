@@ -143,7 +143,11 @@ You can test object-oriented code!</p>
 
 <p>You can repeat the same test with many different “Cause” and “Effect” sections, until you’re completely satisfied that the “Test” code is fully tested.</p>
 
+<h2>How does it work?</h2>
+
 <p>Under the hood, Lens transforms each test case into code snippets like this:</p>
+
+<p>Actual:</p>
 
 <code>// Cause
 $a = 1;
@@ -153,27 +157,18 @@ $b = 2;
 $math = new Math();
 $c = $math-&gt;divide($a, $b);</code>
 
-<p>Lens runs all of these code snippets simultaneously, in parallel processes.
-This <i>guarantees</i> test independence.
-After the dust has settled, Lens checks that all of the expected side effects did indeed happen:</p>
+<p>Expected:</p>
 
 <code>// Effect
 $c = 0.5;</code>
 
-<p>If there were any <i>additional</i> or <i>missing</i> side effects, then Lens will fail the test and alert you.</p>
+<p>Lens runs all of these code snippets simultaneously, in isolated parallel processes.</p>
 
-<p>You can test anything this way.
-If you know what the side effects ought to be, then you can test it.
-For example, you can test code that:</p>
+<p>After the dust has settled, Lens checks that all of the expected side effects did indeed happen.
+If there were any <i>additional</i> or <i>missing</i> side effects, then Lens will fail the test and alert you.</p>
 
-<ul>
-	<li>runs the dangerous PHP functions (“shell_exec”)</li>
-	<li>instantiates objects internally</li>
-	<li>invokes external public static methods</li>
-	<li>calls raw functions using their absolute namespace prefixes</li>
-</ul>
-
-<p>Just list the side effects, and you’re done!</p>
+<p>You can test <a href="<:url "support/":>">anything</a> this way.
+If you know what the side effects ought to be, then you can test it.</p>
 
 <p>Oh, and if the side effects ever grow to be too much?
 You can add an unclean class to the list of mocks in your configuration file:
@@ -187,7 +182,7 @@ But we leave that choice to you.</p>
 
 <h2>See the results</h2>
 
-<p>Now that you’ve written some tests, a coverage directory has appeared:</p>
+<p>Now that you’ve written some tests, a “lens/coverage” directory has appeared:</p>
 
 <dl class="file">
 	<dt>lens/coverage/index.html</dt>
@@ -199,14 +194,14 @@ But we leave that choice to you.</p>
 	<dd><img width="284" height="327" src="<:url "guide/file.png":>" alt="Code coverage: file view"></dd>
 </dl>
 
-<p>Be sure to check out that “lens/coverage” directory in your web browser, since it’s rather useful!</p>
+<p>Be sure to check out that coverage directory in your web browser, since it’s rather useful!</p>
 
 
 <h2>Integrate with your tools</h2>
 
 <nav class="icons">
 <ul>
-	<li><a href="."><:include "theme/images/travis.svg":>Travis CI</a></li>
-	<li><a href="."><:include "theme/images/codecov.svg":>Codecov</a></li>
+	<li><a><:include "theme/images/travis.svg":>Travis CI</a></li>
+	<li><a><:include "theme/images/codecov.svg":>Codecov</a></li>
 </ul>
 </nav>

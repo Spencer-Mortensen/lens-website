@@ -6,6 +6,15 @@
 </ul>
 </nav>
 
+<h2>How do I test code that…</h2>
+
+<ul>
+    <li>instantiates an object?</li>
+    <li>calls a difficult built-in function, like “shell_exec” or “time”?</li>
+    <li>calls an external public static method?</li>
+    <li>uses fully-qualified absolute namespace paths?</li>
+</ul>
+
 <h2>I have a question about…</h2>
 
 <ul>
