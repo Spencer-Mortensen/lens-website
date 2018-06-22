@@ -131,7 +131,7 @@ $b = 0;
 throw new RangeException();</code></dd>
 </dl>
 
-<p><a href="<:url "guide/test/object-oriented/Class.zip":>" class="download">Download this example</a></p>
+<p><a href="<:url "examples/Class.zip":>" class="download">Download this example</a></p>
 
 <p>Run Lens to see the results:</p>
 
