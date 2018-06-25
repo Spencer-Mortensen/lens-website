@@ -1,0 +1,27 @@
+Page: Install PHP on Windows
+Page: Install Composer
+
+TODO: Write an article theme
+	https://www.facebook.com/sharer/sharer.php?u=http://165.227.67.209/blog/preparing-your-business-for-hurricane-harvey
+	https://twitter.com/intent/tweet?text=Preparing%20Your%20Business%20for%20Hurricane%20Harvey&url=http://165.227.67.209/blog/preparing-your-business-for-hurricane-harvey
+	https://www.linkedin.com/shareArticle?mini=true&url=http://165.227.67.209/blog/preparing-your-business-for-hurricane-harvey&title=Preparing%20Your%20Business%20for%20Hurricane%20Harvey
+	https://plus.google.com/share?url=http://165.227.67.209/blog/preparing-your-business-for-hurricane-harvey
+	mailto:?subject=From%20newyorker.com:%20The%20Gun-Control%20Debate%20After%20Parkland&body=This%20time%20feels%20different.%20Will%20things%20finally%20change%3F%C2%A0%0D%0Ahttps%3A%2F%2Fwww.newyorker.com%2Fmagazine%2F2018%2F03%2F12%2Fthe-gun-control-debate-after-parkland
+
+Article: Handle a fatal exception
+Article: Handle a PHP notice/warning/error
+Article: Recommended code quality tools
+Article: Get started with unit testing (Insert a Google ad?)
+
+TODO: Add screenshots to the homepage
+TODO: Add "Edit this page" link
+
+=== IDEAS ===
+
+On the "Community" page: Add a "Thank you" section
+On the "Community" page: Add a "Contribute to Lens" section
+	* Find people who would be willing to provide feedback
+	* Evangelize: let people know about Lens
+	* Support the chat room
+	* Answer questions on StackOverflow
+	* Codeception and Lens?

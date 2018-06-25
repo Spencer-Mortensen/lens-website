@@ -1,0 +1,6 @@
+<nav class="icons">
+<ul>
+	<li><a href="<:url "support/integrations/travis-ci/":>"><:include "theme/images/travis.svg":>Travis CI</a></li>
+	<li><a href="<:url "support/integrations/codecov/":>"><:include "theme/images/codecov.svg":>Codecov</a></li>
+</ul>
+</nav>

@@ -1,0 +1,54 @@
+<p>To start using Travis CI, make sure you have all of the following:</p>
+
+<ul>
+	<li>GitHub login</li>
+	<li>Project hosted as a repository on GitHub</li>
+	<li>Working code in your project</li>
+	<li>Working build/testing script</li>
+</ul>
+
+<p><a href="https://travis-ci.org/auth">Sign in</a> using your GitHub account and accept the GitHub access permissions confirmation.
+Go to your <a href="https://travis-ci.org/profile/">profile page</a> and enable the repository.</p>
+
+<p>In your GitHub repository, create a file like this:</p>
+
+<dl class="file">
+	<dt>.travis.yml</dt>
+	<dd><code>language: php
+sudo: required
+dist: trusty
+
+php:
+ - '5.6'
+ - '7.1'
+
+install:
+ - php -r 'copy("http://lens.guide/lens.phar", "lens.phar"); chmod("lens.phar", 0755);'
+ - composer install
+
+script:
+- ./lens.phar
+
+# after_success:
+# - bash <(curl -s https://codecov.io/bash)
+
+notifications:
+   email:
+      on_start: never
+      on_success: change
+      on_failure: always</code></dd>
+</dl>
+
+<a href="https://docs.travis-ci.com/user/customizing-the-build/">Customization</a>
+
+
+<h2>Badge</h2>
+
+<dl class="file">
+	<dt>README.md</dt>
+	<dd><code>## Unit tests
+
+This project uses the [Lens](http://lens.guide) unit-testing framework.
+
+[![Build Status](https://travis-ci.org/<b>organization</b>/<b>repository</b>.png?branch=<b>master</b>)](https://travis-ci.org/<b>organization</b>/<b>repository</b>)</code></dd>
+</dl>

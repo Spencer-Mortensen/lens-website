@@ -1,0 +1,15 @@
+<p><a href="https://codecov.io/">Sign up</a> using your GitHub account.
+Add the repositories that you'd like to cover.</p>
+
+<p><a href="https://docs.codecov.io/docs/about-the-codecov-bash-uploader#section-upload-token">Upload token</a></p>
+
+<h2>Badge</h2>
+
+<dl class="file">
+	<dt>README.md</dt>
+	<dd><code>## Unit tests
+
+This project uses the [Lens](http://lens.guide) unit-testing framework.
+
+[![Code Coverage](https://img.shields.io/codecov/c/github/<b>organization</b>/<b>repository</b>.svg?maxAge=2592000)](https://codecov.io/github/<b>organization</b>/<b>repository</b>?branch=<b>master</b>)</code></dd>
+</dl>

@@ -6,10 +6,12 @@
 </ul>
 </nav>
 
+
 <h2>I have a question about…</h2>
 
 <ul>
 	<li><a href="<:url "support/testing/":>">testing my code</a></li>
+	<li><a href="<:url "support/integrations/":>">integrating with my tools</a></li>
 	<li>the <a href="<:url "support/command/":>">Lens command</a></li>
 	<li>the <a href="<:url "support/organization/":>">directory organization</a></li>
 	<li>the <a href="<:url "support/tests-file/":>">tests-file syntax</a></li>
