@@ -1,0 +1,45 @@
+<p>How can I test code that instantiates an object?</p>
+
+<dl class="file">
+	<dt>src/Clock.php</dt>
+	<dd><code>&lt;?php
+
+namespace Example;
+
+use DateTime;
+
+class Clock
+{
+	public function getTime()
+	{
+		$time = <b>new DateTime()</b>;
+		$time-&gt;format('g:i a');
+	}
+}</code></dd>
+</dl>
+
+<p>Add it to your list of side effects.
+Then list any method calls:</p>
+
+<dl class="file">
+	<dt>lens/tests/Clock.php</dt>
+	<dd><code>&lt;?php
+
+namespace Example;
+
+use DateTime;
+
+// Test
+$clock = new Clock();
+$output = $clock-&gt;getTime();
+
+// Effect
+$time = new DateTime();
+$time-&gt;format('g:i a'); // return '6:35 am';
+
+// Effect
+$time = new DateTime();
+$time-&gt;format('g:i a'); // return '12:01 pm';</code></dd>
+</dl>
+
+<p><a href="<:url "examples/instantiation.zip":>" class="download">Download this example</a></p>

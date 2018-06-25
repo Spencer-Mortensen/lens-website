@@ -69,7 +69,7 @@ $output = "Hello Ann, it's Saturday today!";
 <p>Did you see how we used a comment to provide the expected behavior for each function call?
 That’s all there is to it!</p>
 
-<p><a href="<:url "examples/Mocks.zip":>" class="download">Download this example</a></p>
+<p><a href="<:url "examples/mocks.zip":>" class="download">Download this example</a></p>
 
 <p>Now run the <a href="<:url "support/executable/":>">Lens executable</a> to see the results:</p>
 

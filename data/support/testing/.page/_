@@ -1,0 +1,8 @@
+<p>How can I test code that…</p>
+
+<ul>
+	<li><a href="<:url "support/testing/instantiation/":>">instantiates an object</a>?</li>
+	<li>calls “<a href="<:url "support/testing/shell_exec/":>">shell_exec</a>”?</li>
+	<li>calls a <a href="<:url "support/testing/static-method/":>">static method</a> from an external class?</li>
+	<li>uses a <a href="<:url "support/testing/fully-qualified-name":>">fully-qualified name</a>?</li>
+</ul>

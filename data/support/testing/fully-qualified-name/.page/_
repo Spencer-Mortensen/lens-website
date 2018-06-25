@@ -1,0 +1,39 @@
+<p>How can I test code that uses a fully-qualified name?</p>
+
+<dl class="file">
+	<dt>src/Shell.php</dt>
+	<dd><code>&lt;?php
+
+namespace Example;
+
+use DateTime;
+
+class Shell
+{
+	public function run($command)
+	{
+		<b>\</b>shell_exec($command);
+	}
+}</code></dd>
+</dl>
+
+<p>Add it to your list of side effects:</p>
+
+<dl class="file">
+	<dt>lens/tests/Clock.php</dt>
+	<dd><code>&lt;?php
+
+namespace Example;
+
+// Test
+$shell = new Shell();
+$shell->run('whoami');
+
+// Effect
+shell_exec('whoami'); // return 'user';
+
+// Effect
+shell_exec('whoami'); // return 'root';</code></dd>
+</dl>
+
+<p><a href="<:url "examples/shell_exec.zip":>" class="download">Download this example</a></p>

@@ -131,7 +131,7 @@ $b = 0;
 throw new RangeException();</code></dd>
 </dl>
 
-<p><a href="<:url "examples/Class.zip":>" class="download">Download this example</a></p>
+<p><a href="<:url "examples/class.zip":>" class="download">Download this example</a></p>
 
 <p>Run Lens to see the results:</p>
 
@@ -167,7 +167,7 @@ $c = 0.5;</code>
 <p>After the dust has settled, Lens checks that all of the expected side effects did indeed happen.
 If there were any <i>additional</i> or <i>missing</i> side effects, then Lens will fail the test and alert you.</p>
 
-<p>You can test <a href="<:url "support/":>">anything</a> this way.
+<p>You can test <a href="<:url "support/testing/":>">anything</a> this way.
 If you know what the side effects ought to be, then you can test it.</p>
 
 <p>Oh, and if the side effects ever grow to be too much?

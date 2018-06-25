@@ -7,9 +7,11 @@ Imagine what you could accomplish if <i>half</i> your time were returned to you.
 
 <h2>You’re at risk</h2>
 
-<p>Assertion-based frameworks only check the specific values in your assertions.
-<b>What about new side effects?</b>
-At any time, you could be bitten by:</p>
+<p><b>What about side effects?</b>
+Assertion-based frameworks only check the values in your assertions.
+If it wasn’t asserted, <i>it didn’t get checked.</i></p>
+
+<p>At any time, you could be bitten by:</p>
 
 <ul>
 	<li>a malicious system call buried in a merge request</li>
@@ -18,7 +20,7 @@ At any time, you could be bitten by:</p>
 	<li>a new pass-by-reference behavior that will overwrite your variables</li>
 </ul>
 
-<p>If it wasn’t explicitly asserted, <i>it didn’t get checked.</i>
+<p>
 Assertion-based frameworks won’t check every side effect.
 <b>Lens will.</b></p>
 
@@ -30,4 +32,5 @@ Usually, it’s the controller or the data-access layer.
 Even with partial mocks, and considerable effort, there is some code that escapes testing.</p>
 
 <p>With most unit-testing frameworks, the best you can hope for is <i>almost</i> or <i>good enough</i>.
-<b>With Lens, you can get 100%.</b></p>
+<b>With Lens, you can get 100%.</b>
+And without any special effort.</p>

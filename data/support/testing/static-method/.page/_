@@ -1,0 +1,42 @@
+<p>How can I test code that calls a public static method from an external class?</p>
+
+<dl class="file">
+	<dt>src/Database.php</dt>
+	<dd><code>&lt;?php
+
+namespace Example;
+
+use PDO;
+
+class Database
+{
+	public function getDrivers()
+	{
+		<b>PDO::getAvailableDrivers</b>();
+	}
+}</code></dd>
+</dl>
+
+<p>Add it to your list of side effects:</p>
+
+<dl class="file">
+	<dt>lens/tests/Database.php</dt>
+	<dd><code>&lt;?php
+
+namespace Example;
+
+// Test
+$database = new Database();
+$database->getDrivers();
+
+// Effect
+PDO::getAvailableDrivers(); // return [];
+
+// Effect
+PDO::getAvailableDrivers(); // return ['mysql'];
+
+// Effect
+PDO::getAvailableDrivers(); // return ['mysql', 'sqlite'];</code></dd>
+</dl>
+
+<p><a href="<:url "examples/shell_exec.zip":>" class="download">Download this example</a></p>
