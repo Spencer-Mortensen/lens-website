@@ -71,7 +71,7 @@ That’s all there is to it!</p>
 
 <p><a href="<:url "examples/mocks.zip":>" class="download">Download this example</a></p>
 
-<p>Now run the <a href="<:url "support/executable/":>">Lens executable</a> to see the results:</p>
+<p>Now run the <a href="<:url "support/command/":>">Lens command</a> to see the results:</p>
 
 <code class="terminal">lens
 # Passed tests: 1</code>

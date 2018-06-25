@@ -15,8 +15,9 @@ If it wasn’t asserted, <i>it didn’t get checked.</i></p>
 
 <ul>
 	<li>a malicious system call buried in a merge request</li>
+	<li>a forgotten debugging statement that will break your AJAX</li>
 	<li>a suppressed warning that could have revealed a big issue</li>
-	<li>a forgotten debugging statement that will now break your AJAX</li>
+	<li>filesystem calls that assume your development area resembles production</li>
 	<li>a new pass-by-reference behavior that will overwrite your variables</li>
 </ul>
 

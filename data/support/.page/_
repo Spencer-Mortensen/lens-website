@@ -10,7 +10,7 @@
 
 <ul>
 	<li><a href="<:url "support/testing/":>">testing my code</a></li>
-	<li><a href="<:url "support/executable/":>">the Lens command</a></li>
-	<li><a href="<:url "support/organization/":>">the directory organization</a></li>
-	<li><a href="<:url "support/tests-file/":>">the tests-file syntax</a></li>
+	<li>the <a href="<:url "support/command/":>">Lens command</a></li>
+	<li>the <a href="<:url "support/organization/":>">directory organization</a></li>
+	<li>the <a href="<:url "support/tests-file/":>">tests-file syntax</a></li>
 </ul>
