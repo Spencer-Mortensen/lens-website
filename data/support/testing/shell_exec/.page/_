@@ -20,7 +20,7 @@ class Shell
 <p>Add it to your list of side effects:</p>
 
 <dl class="file">
-	<dt>lens/tests/Clock.php</dt>
+	<dt>lens/tests/Shell.php</dt>
 	<dd><code>&lt;?php
 
 namespace Example;

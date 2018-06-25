@@ -20,7 +20,7 @@ class Shell
 <p>Add it to your list of side effects:</p>
 
 <dl class="file">
-	<dt>lens/tests/Clock.php</dt>
+	<dt>lens/tests/Shell.php</dt>
 	<dd><code>&lt;?php
 
 namespace Example;
@@ -36,4 +36,4 @@ shell_exec('whoami'); // return 'user';
 shell_exec('whoami'); // return 'root';</code></dd>
 </dl>
 
-<p><a href="<:url "examples/shell_exec.zip":>" class="download">Download this example</a></p>
+<p><a href="<:url "examples/fully-qualified-name.zip":>" class="download">Download this example</a></p>
