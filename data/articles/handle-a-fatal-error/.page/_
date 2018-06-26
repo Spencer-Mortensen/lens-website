@@ -35,11 +35,11 @@ restore_error_handler();</code>
 
 <p>This lets us catch raw PHP errors!</p>
 
-<p>Unfortunately, this only works on the mildest of errors.
-The more severe errors cannot be handled this way (E_ERROR, E_PARSE, E_CORE_ERROR, E_CORE_WARNING, E_COMPILE_ERROR, E_COMPILE_WARNING, and many E_STRICT errors).</p>
+<p>Unfortunately, this only works on the <i>mildest</i> of errors.
+The more severe errors cannot be caught this way (E_ERROR, E_PARSE, E_CORE_ERROR, E_CORE_WARNING, E_COMPILE_ERROR, E_COMPILE_WARNING, and many E_STRICT errors).</p>
 
 <p>The trouble is that PHP <i>shuts down</i> when it encounters a fatal error, so our try-catch block won’t even run.
-But there is one last thing that <i>will</i> run just before PHP shuts down: <i>a shutdown function</i>.</p>
+But there is one thing that <i>will</i> run just before PHP shuts down: <i>a shutdown function</i>.</p>
 
 <code>&lt;?php
 
@@ -69,5 +69,8 @@ require '';
 
 echo 'Not executed!';</code>
 
-<p>The only trouble is that the shutdown function <i>always</i> runs—even during a normal shutdown, and even when you call the exit function.
-We need a fool-proof way to distinguish between a normal and abnormal shutdown.</p>
+<p>This does indeed allow us to catch fatal errors!</p>
+
+<p>But the shutdown function will <i>always</i> run—even during a normal shutdown.
+We need a bullet-proof way to distinguish between a normal and an abnormal shutdown.
+Whatever we choose, it must be more reliable than simply checking the last error value, since that won’t work in every case.</p>
