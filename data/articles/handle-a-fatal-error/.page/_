@@ -1,5 +1,5 @@
 <p>Fatal errors are seemingly impossible to catch.
-A try-catch block can handle an <a href="http://php.net/manual/en/class.exception.php">Exception</a> or an <a href="http://php.net/manual/en/class.error.php">Error</a>, but a raw PHP notice, warning, or error will slip right through!</p>
+A try-catch block can handle an <code><a href="http://php.net/manual/en/class.exception.php">Exception</a></code> or an <code><a href="http://php.net/manual/en/class.error.php">Error</a></code>, but a raw PHP notice, warning, or error will slip right through!</p>
 
 <code>try {
 	define(Pi, 3);
@@ -10,32 +10,33 @@ A try-catch block can handle an <a href="http://php.net/manual/en/class.exceptio
 }</code>
 
 <p>The raw PHP errors aren’t thrown objects, so they can’t be caught in a try-catch block.
-But, they <i>can</i> be turned into exceptions using the <a href="http://php.net/manual/en/function.set-error-handler.php">set_error_handler</a>:</p>
+But they <i>can</i> be turned into exceptions using the <code><a href="http://php.net/manual/en/function.set-error-handler.php">set_error_handler</a></code>:</p>
 
 <code>&lt;?php
 
 $onError = function ($level, $message, $file, $line) {
-    $message = trim($message);
-    $code = null;
+	$message = trim($message);
+	$code = null;
 
-    throw new ErrorException($message, $code, $level, $file, $line);
+	throw new ErrorException($message, $code, $level, $file, $line);
 };
 
-set_error_handler($onError);
-
 try {
-    define(Pi, 3);
+	set_error_handler($onError);
+	define(Pi, 3);
 } catch (Exception $exception) {
 	echo 'Exception: ', $exception->getMessage(), "\n";
 } catch (Error $error) {
 	echo 'Error: ', $error->getMessage(), "\n";
-}
+} finally {
+	restore_error_handler();
+}</code>
 
-restore_error_handler();</code>
+<p>This lets us catch raw PHP errors!
+The <code><a href="http://php.net/manual/en/function.restore-error-handler.php">restore_error_handler</a></code> returns everything to normal, so there won’t be any side-effects for the rest of our codebase (and we wrap it in a <code>finally</code> statement so it will <i>always</i> run).</p>
 
-<p>This lets us catch raw PHP errors!</p>
-
-<p>Unfortunately, this only works on the <i>mildest</i> of errors.
+<p>This lets us catch raw PHP errors.
+But, unfortunately, only the <i>mildest</i> of errors.
 The more severe errors cannot be caught this way (E_ERROR, E_PARSE, E_CORE_ERROR, E_CORE_WARNING, E_COMPILE_ERROR, E_COMPILE_WARNING, and many E_STRICT errors).</p>
 
 <p>The trouble is that PHP <i>shuts down</i> when it encounters a fatal error, so our try-catch block won’t even run.
@@ -58,19 +59,54 @@ $onShutdown = function () {
 
 	$exception = new ErrorException($message, $code, $level, $file, $line);
 
-	echo "Exception: ", $exception->getMessage(), "\n";
+	echo 'Shutdown: ', $exception->getMessage(), "\n";
+};
+
+$onError = function ($level, $message, $file, $line) {
+	$message = trim($message);
+	$code = null;
+
+	throw new ErrorException($message, $code, $level, $file, $line);
 };
 
 register_shutdown_function($onShutdown);
 error_reporting(0);
 
-// E_COMPILE_ERROR:
-require '';
+try {
+	set_error_handler($onError);
+	define(Pi, 3);
+} catch (Exception $exception) {
+	echo 'Exception: ', $exception->getMessage(), "\n";
+} catch (Error $error) {
+	echo 'Error: ', $error->getMessage(), "\n";
+} finally {
+	restore_error_handler();
+}</code>
 
-echo 'Not executed!';</code>
+<p>And now we can catch fatal errors.</p>
 
-<p>This does indeed allow us to catch fatal errors!</p>
+<p>When we handle an error using our error handler, it won’t be available later through <code>error_get_last</code>:
+That means we’ll only ever handle an issue once, which is exactly right.</p>
 
-<p>But the shutdown function will <i>always</i> run—even during a normal shutdown.
-We need a bullet-proof way to distinguish between a normal and an abnormal shutdown.
-Whatever we choose, it must be more reliable than simply checking the last error value, since that won’t work in every case.</p>
+<p>As icing on the cake, we can define a global exception handler, so we can catch any thrown object that makes it up to the global scope unexpectedly:</p>
+
+<code>&lt;?php
+
+$onException = function ($exception) {
+	echo "Exception: ", $exception->getMessage(), "\n";
+};
+
+set_exception_handler($onException);
+
+throw new Exception('Armageddon');</code>
+
+<p>At this point, we’re feeling pretty safe:</p>
+
+<ul>
+	<li>We can catch both Exceptions and Errors, even if they make it up to the global scope.</li>
+	<li>We can catch raw PHP notices, warnings, and errors—including some fatal errors.</li>
+</ul>
+
+<p>But there are still a few fatal errors that we cannot catch!
+For example, a compile-time syntax error or a run-time maximum-function-nesting error can’t be caught from within the PHP script itself.
+To catch <i>those</i> types of errors, we <i>also</i> need to monitor the exit code and the STDERR of the script!</p>
