@@ -1,8 +1,8 @@
 <nav class="icons">
 <ul>
-	<li><a href="https://github.com/spencer-mortensen/lens/issues"><:include "theme/images/bug.svg/":>Report a bug</a></li>
-	<li><a href="https://stackoverflow.com/questions/tagged/php+lens"><:include "theme/images/chat.svg/":>Ask for help</a></li>
-	<li><a href="https://github.com/spencer-mortensen/lens/issues"><:include "theme/images/feature.svg/":>Request a feature</a></li>
+	<li><a href="https://github.com/spencer-mortensen/lens/issues" class="svg"><:include "theme/images/bug.svg/":>Report a bug</a></li>
+	<li><a href="https://stackoverflow.com/questions/tagged/php+lens" class="svg"><:include "theme/images/chat.svg/":>Ask for help</a></li>
+	<li><a href="https://github.com/spencer-mortensen/lens/issues" class="svg"><:include "theme/images/feature.svg/":>Request a feature</a></li>
 </ul>
 </nav>
 
@@ -11,7 +11,7 @@
 
 <ul>
 	<li><a href="<:url "support/testing/":>">testing my code</a></li>
-	<li><a href="<:url "support/integrations/":>">integrating with my tools</a></li>
+	<li><a href="<:url "support/integrations/":>">integrating with another tool</a></li>
 	<li>the <a href="<:url "support/command/":>">Lens command</a></li>
 	<li>the <a href="<:url "support/organization/":>">directory organization</a></li>
 	<li>the <a href="<:url "support/tests-file/":>">tests-file syntax</a></li>

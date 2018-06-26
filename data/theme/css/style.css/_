@@ -292,10 +292,6 @@ a[href].download:hover, a[href].download:active {
 	text-align: center;
 }
 
-.icons a:hover {
-	color: #000000;
-}
-
 .icons svg {
 	display: block;
 	height: 64px;
@@ -305,16 +301,32 @@ a[href].download:hover, a[href].download:active {
 	width: 64px;
 }
 
-.icons .light-fill {
+.icons a:hover {
+	color: #000000;
+}
+
+.svg .light-fill {
 	fill: #ffffff;
 }
 
-.icons .dark-fill {
+.svg .light-stroke {
+	fill: #ffffff;
+}
+
+.svg .dark-fill {
 	fill: #222222;
 }
 
-.icons a:hover .dark-fill {
+.svg .dark-stroke {
+	stroke: #222222;
+}
+
+.svg:hover .dark-fill {
 	fill: #000000;
+}
+
+.svg:hover .dark-stroke {
+	stroke: #000000;
 }
 
 

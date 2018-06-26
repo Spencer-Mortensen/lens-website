@@ -1,0 +1,38 @@
+.articles {
+	margin-top: 1.5em;
+}
+
+.articles li {
+	display: block;
+	border-bottom: 1px dashed #cccccc;
+	list-style-type: none;
+	min-height: 144px;
+	padding: 1.5em 0 1.5em 144px;
+	position: relative;
+}
+
+.articles li:first-child {
+	border-top: 1px dashed #cccccc;
+}
+
+.articles .svg {
+	height: 144px;
+	left: -1.5em;
+	padding: 1.5em .75em;
+	position: absolute;
+	top: 0;
+	width: 144px;
+}
+
+.articles h1 {
+	font-size: 1.4142em;
+	padding: 0;
+}
+
+.articles a {
+	color: #222222;
+}
+
+.articles a:hover {
+	color: #000000;
+}

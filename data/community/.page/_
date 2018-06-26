@@ -1,8 +1,8 @@
 <nav class="icons">
 <ul>
-	<li><a href="https://gitter.im/php-lens/Lobby"><:include "theme/images/chat.svg/":>Chat</a></li>
-	<li><a href="https://twitter.com/PhpLens"><:include "theme/images/twitter.svg/":>Get tips</a></li>
-	<li><a href="<:url "community/big-announcements/":>"><:include "theme/images/email.svg/":>Hear the big announcements</a></li>
+	<li><a href="https://gitter.im/php-lens/Lobby" class="svg"><:include "theme/images/chat.svg/":>Chat</a></li>
+	<li><a href="https://twitter.com/PhpLens" class="svg"><:include "theme/images/twitter.svg/":>Get tips</a></li>
+	<li><a href="<:url "community/big-announcements/":>" class="svg"><:include "theme/images/email.svg/":>Hear the big announcements</a></li>
 </ul>
 </nav>
 
