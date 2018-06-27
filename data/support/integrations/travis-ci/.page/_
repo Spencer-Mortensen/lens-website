@@ -7,10 +7,11 @@
 	<li>Working build/testing script</li>
 </ul>
 
-<p><a href="https://travis-ci.org/auth">Sign in</a> using your GitHub account and accept the GitHub access permissions confirmation.
-Go to your <a href="https://travis-ci.org/profile/">profile page</a> and enable the repository.</p>
+<p><a href="https://travis-ci.org/auth">Sign in</a> using your GitHub account and accept the GitHub access permissions confirmation.</p>
 
-<p>In your GitHub repository, create a file like this:</p>
+<p>Go to your <a href="https://travis-ci.org/profile/">profile page</a> and enable the repository.</p>
+
+<p>In your GitHub repository, create this file:</p>
 
 <dl class="file">
 	<dt>.travis.yml</dt>
@@ -27,10 +28,10 @@ install:
  - composer install
 
 script:
-- ./lens.phar
+ - ./lens.phar
 
 # after_success:
-# - bash <(curl -s https://codecov.io/bash)
+#  - bash <(curl -s https://codecov.io/bash)
 
 notifications:
    email:
@@ -39,8 +40,9 @@ notifications:
       on_failure: always</code></dd>
 </dl>
 
-<a href="https://docs.travis-ci.com/user/customizing-the-build/">Customization</a>
+<p><a href="https://docs.travis-ci.com/user/customizing-the-build/">Customization</a></p>
 
+<p>Commit and push your changes.</p>
 
 <h2>Badge</h2>
 

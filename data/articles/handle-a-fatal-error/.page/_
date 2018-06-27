@@ -12,9 +12,7 @@ A try-catch block can handle an <code><a href="http://php.net/manual/en/class.ex
 <p>The raw PHP errors aren’t thrown objects, so they can’t be caught in a try-catch block.
 But they <i>can</i> be turned into exceptions using the <code><a href="http://php.net/manual/en/function.set-error-handler.php">set_error_handler</a></code>:</p>
 
-<code>&lt;?php
-
-$onError = function ($level, $message, $file, $line) {
+<code>$onError = function ($level, $message, $file, $line) {
 	$message = trim($message);
 	$code = null;
 
@@ -33,7 +31,7 @@ try {
 }</code>
 
 <p>This lets us catch raw PHP errors!
-The <code><a href="http://php.net/manual/en/function.restore-error-handler.php">restore_error_handler</a></code> returns everything to normal, so there won’t be any side-effects for the rest of our codebase (and we wrap it in a <code>finally</code> statement so it will <i>always</i> run).</p>
+And the <code><a href="http://php.net/manual/en/function.restore-error-handler.php">restore_error_handler</a></code> returns everything to normal, so there won’t be any side-effects for the rest of our codebase.</p>
 
 <p>This lets us catch raw PHP errors.
 But, unfortunately, only the <i>mildest</i> of errors.
@@ -42,9 +40,7 @@ The more severe errors cannot be caught this way (E_ERROR, E_PARSE, E_CORE_ERROR
 <p>The trouble is that PHP <i>shuts down</i> when it encounters a fatal error, so our try-catch block won’t even run.
 But there is one thing that <i>will</i> run just before PHP shuts down: <i>a shutdown function</i>.</p>
 
-<code>&lt;?php
-
-$onShutdown = function () {
+<code>$onShutdown = function () {
 	$error = error_get_last();
 
 	if ($error === null) {
@@ -59,40 +55,20 @@ $onShutdown = function () {
 
 	$exception = new ErrorException($message, $code, $level, $file, $line);
 
-	echo 'Shutdown: ', $exception->getMessage(), "\n";
-};
-
-$onError = function ($level, $message, $file, $line) {
-	$message = trim($message);
-	$code = null;
-
-	throw new ErrorException($message, $code, $level, $file, $line);
+	echo 'Error: ', $exception->getMessage(), "\n";
 };
 
 register_shutdown_function($onShutdown);
 error_reporting(0);
 
-try {
-	set_error_handler($onError);
-	define(Pi, 3);
-} catch (Exception $exception) {
-	echo 'Exception: ', $exception->getMessage(), "\n";
-} catch (Error $error) {
-	echo 'Error: ', $error->getMessage(), "\n";
-} finally {
-	restore_error_handler();
-}</code>
+require '';</code>
 
-<p>And now we can catch fatal errors.</p>
+<p>This lets us handle even a fatal error!</p>
 
-<p>When we handle an error using our error handler, it won’t be available later through <code>error_get_last</code>:
-That means we’ll only ever handle an issue once, which is exactly right.</p>
+<p>But there is a little more we can do.
+We can define a global exception handler, so we can catch any thrown object that makes it up to the global scope unexpectedly:</p>
 
-<p>As icing on the cake, we can define a global exception handler, so we can catch any thrown object that makes it up to the global scope unexpectedly:</p>
-
-<code>&lt;?php
-
-$onException = function ($exception) {
+<code>$onException = function ($exception) {
 	echo "Exception: ", $exception->getMessage(), "\n";
 };
 
@@ -109,4 +85,4 @@ throw new Exception('Armageddon');</code>
 
 <p>But there are still a few fatal errors that we cannot catch!
 For example, a compile-time syntax error or a run-time maximum-function-nesting error can’t be caught from within the PHP script itself.
-To catch <i>those</i> types of errors, we <i>also</i> need to monitor the exit code and the STDERR of the script!</p>
+To catch <i>those</i> types of errors, we <i>also</i> need to be monitoring the exit code and the STDERR of the script.</p>
