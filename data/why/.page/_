@@ -21,8 +21,7 @@ If it wasn’t asserted, <i>it didn’t get checked.</i></p>
 	<li>a new pass-by-reference behavior that will overwrite your variables</li>
 </ul>
 
-<p>
-Assertion-based frameworks <i>won’t</i> protect you and they <i>won’t</i> check every side effect.
+<p>Assertion-based frameworks <i>won’t</i> protect you and they <i>won’t</i> check every side effect.
 <b>Lens will.</b></p>
 
 
@@ -33,5 +32,4 @@ Usually, it’s the controller or the data-access layer.
 Even with partial mocks, and considerable effort, there is some code that escapes testing.</p>
 
 <p>With most unit-testing frameworks, the best you can hope for is <i>almost</i> or <i>good enough</i>.
-<b>With Lens, you can get 100%.</b>
-(And without any special effort.)</p>
+<b>With Lens, you can get 100%.</b></p>

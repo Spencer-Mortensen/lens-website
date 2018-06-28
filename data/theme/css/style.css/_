@@ -85,7 +85,6 @@ a[href]:hover, a[href]:active {
 }
 
 code {
-	display: block;
 	color: #222222;
 	font-family: 'Inconsolata', monospace;
 	line-height: 1.125em;
@@ -190,8 +189,12 @@ ul.list li {
 	margin: .75em 0;
 }
 
-.file .code {
-	display: inline-block;
+code.terminal {
+	display: block;
+}
+
+.file code {
+	display: block;
 }
 
 .file code .red, .file code .green {

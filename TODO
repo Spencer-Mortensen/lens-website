@@ -1,3 +1,12 @@
+Add social media icons to article
+
+# Add these instructions somewhere:
+=== .gitignore ===
+/lens/cache/
+/lens/coverage/
+======
+
+
 Page: Install PHP on Windows
 Page: Install Composer
 
@@ -8,8 +17,6 @@ TODO: Write an article theme
 	https://plus.google.com/share?url=http://165.227.67.209/blog/preparing-your-business-for-hurricane-harvey
 	mailto:?subject=From%20newyorker.com:%20The%20Gun-Control%20Debate%20After%20Parkland&body=This%20time%20feels%20different.%20Will%20things%20finally%20change%3F%C2%A0%0D%0Ahttps%3A%2F%2Fwww.newyorker.com%2Fmagazine%2F2018%2F03%2F12%2Fthe-gun-control-debate-after-parkland
 
-Article: Handle a fatal exception
-Article: Handle a PHP notice/warning/error
 Article: Recommended code quality tools
 Article: Get started with unit testing (Insert a Google ad?)
 
