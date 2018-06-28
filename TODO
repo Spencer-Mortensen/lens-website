@@ -1,4 +1,6 @@
 Add social media icons to article
+Enlarge the Twitter icon viewbox just a little
+Adjust the G+ icon sizing to avoid the right-edge cutoff
 
 # Add these instructions somewhere:
 === .gitignore ===
@@ -10,11 +12,18 @@ Add social media icons to article
 Page: Install PHP on Windows
 Page: Install Composer
 
-TODO: Write an article theme
+	<li><a href="." class="svg"><:include "theme/images/twitter.svg/":>Twitter</a></li>
+	<li><a href="." class="svg"><:include "theme/images/facebook.svg/":>Facebook</a></li>
+	<li><a href="." class="svg"><:include "theme/images/google-plus.svg/":>Google+</a></li>
+	<li><a href="." class="svg"><:include "theme/images/linked-in.svg/":>LinkedIn</a></li>
+	<li><a href="." class="svg"><:include "theme/images/email.svg/":>Email</a></li>
+
+	# https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview:
+	https://twitter.com/intent/tweet?text=Preparing%20Your%20Business%20for%20Hurricane%20Harvey&url=http://165.227.67.209/blog/preparing-your-business-for-hurricane-harvey&hashtags=tag1,tag2,tag3
+
 	https://www.facebook.com/sharer/sharer.php?u=http://165.227.67.209/blog/preparing-your-business-for-hurricane-harvey
-	https://twitter.com/intent/tweet?text=Preparing%20Your%20Business%20for%20Hurricane%20Harvey&url=http://165.227.67.209/blog/preparing-your-business-for-hurricane-harvey
-	https://www.linkedin.com/shareArticle?mini=true&url=http://165.227.67.209/blog/preparing-your-business-for-hurricane-harvey&title=Preparing%20Your%20Business%20for%20Hurricane%20Harvey
 	https://plus.google.com/share?url=http://165.227.67.209/blog/preparing-your-business-for-hurricane-harvey
+	https://www.linkedin.com/shareArticle?mini=true&url=http://165.227.67.209/blog/preparing-your-business-for-hurricane-harvey&title=Preparing%20Your%20Business%20for%20Hurricane%20Harvey
 	mailto:?subject=From%20newyorker.com:%20The%20Gun-Control%20Debate%20After%20Parkland&body=This%20time%20feels%20different.%20Will%20things%20finally%20change%3F%C2%A0%0D%0Ahttps%3A%2F%2Fwww.newyorker.com%2Fmagazine%2F2018%2F03%2F12%2Fthe-gun-control-debate-after-parkland
 
 Article: Recommended code quality tools

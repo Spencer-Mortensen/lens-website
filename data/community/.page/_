@@ -3,6 +3,10 @@
 	<li><a href="https://gitter.im/php-lens/Lobby" class="svg"><:include "theme/images/chat.svg/":>Chat</a></li>
 	<li><a href="https://twitter.com/PhpLens" class="svg"><:include "theme/images/twitter.svg/":>Get tips</a></li>
 	<li><a href="<:url "community/big-announcements/":>" class="svg"><:include "theme/images/email.svg/":>Hear the big announcements</a></li>
+
+	<li><a href="." class="svg"><:include "theme/images/facebook.svg":>Facebook</a></li>
+	<li><a href="." class="svg"><:include "theme/images/linked-in.svg":>LinkedIn</a></li>
+	<li><a href="." class="svg"><:include "theme/images/google-plus.svg":>Google+</a></li>
 </ul>
 </nav>
 
