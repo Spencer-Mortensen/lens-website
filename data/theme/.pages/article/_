@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta property="og:title" content="<:include "<:path:>.title/":>">
+	<meta property="og:description" content="<:include "<:path:>.summary/":>">
+	<meta property="og:url" content="http://lens.guide<:url "<:path:>" true:>">
+	<meta property="og:image" content="http://lens.guide<:url "<:path:>image.svg" true:>">
+	<title><:include "<:path:>.title/":> | Lens</title>
+	<link href="<:url "theme/css/style.css":>" rel="stylesheet" type="text/css">
+	<link href="<:url "theme/css/articles.css":>" rel="stylesheet" type="text/css">
+	<link href="<:url "theme/css/article.css":>" rel="stylesheet" type="text/css">
+	<link href="<:url "theme/css/install.css":>" rel="stylesheet" type="text/css">
+	<link href="<:url "theme/css/community.css":>" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa:400|Montserrat|Inconsolata" rel="stylesheet">
+	<link href="<:url "favicon.ico":>" rel="shortcut icon" type="image/x-icon">
+<!--	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112827963-1"></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-112827963-1');</script> -->
+</head>
+
+<body>
+
+<header><nav id="menu"><:include ".menu/":></nav></header>
+
+<article>
+<h1><:include "<:path:>.title/":></h1>
+
+<:include "<:path:>.page/":>
+</article>
+
+</body>
+
+</html>
