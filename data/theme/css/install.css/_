@@ -86,14 +86,6 @@
 	padding-right: .25em;
 }
 
-#guide-install .light-fill {
-	fill: #ffffff;
-}
-
-#guide-install .light-stroke {
-	stroke: #ffffff;
-}
-
 #guide-install a {
 	border-top: 2px solid #ffffff;
 	border-bottom: 1px solid #cccccc;

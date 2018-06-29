@@ -1,0 +1,21 @@
+#share {
+	display: block;
+	list-style-type: none;
+	padding: 1.5em 0 0 0;
+	text-align: center;
+}
+
+#share li {
+	display: inline-block;
+}
+
+#share a {
+	display: inline-block;
+	margin: 0 .375em;
+}
+
+#share svg {
+	display: inline-block;
+	height: 48px;
+	width: 48px;
+}

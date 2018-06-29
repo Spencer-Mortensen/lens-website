@@ -1,0 +1,5 @@
+We’d love to catch and handle fatal errors in our code.
+But that doesn’t seem possible!
+After all, a fatal error is <i>fatal</i>—isn’t it?
+And, yet, Lens does it.
+Find out how to handle fatal errors with a technique straight out of Lens!

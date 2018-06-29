@@ -7,6 +7,7 @@
 	<title><:include "<:path:>.title/":> | Lens</title>
 	<link href="<:url "theme/css/style.css":>" rel="stylesheet" type="text/css">
 	<link href="<:url "theme/css/articles.css":>" rel="stylesheet" type="text/css">
+	<link href="<:url "theme/css/article.css":>" rel="stylesheet" type="text/css">
 	<link href="<:url "theme/css/install.css":>" rel="stylesheet" type="text/css">
 	<link href="<:url "theme/css/community.css":>" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa:400|Montserrat|Inconsolata" rel="stylesheet">

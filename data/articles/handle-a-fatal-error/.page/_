@@ -86,3 +86,10 @@ throw new Exception('Armageddon');</code>
 <p>But there are still a few fatal errors that we cannot catch!
 For example, a compile-time syntax error or a run-time maximum-function-nesting error can’t be caught from within the PHP script itself.
 To catch <i>those</i> types of errors, we <i>also</i> need to be monitoring the exit code and the STDERR of the script.</p>
+
+<ul id="share">
+	<li><a title="Tweet about this article" href="https://twitter.com/intent/tweet?text=Handle%20a%20PHP%20fatal%20error&amp;url=http%3A%2F%2Flens.guide%2Farticles%2Fhandle-a-fatal-error%2F&amp;hashtags=php" class="svg"><:include "theme/images/twitter.svg/":></a></li>
+	<li><a title="Share this article on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flens.guide%2Farticles%2Fhandle-a-fatal-error%2F" class="svg"><:include "theme/images/facebook.svg/":></a></li>
+	<li><a title="Share this article on LinkedIn" href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flens.guide%2Farticles%2Fhandle-a-fatal-error%2F&amp;title=Handle%20a%20PHP%20fatal%20error&amp;summary=We%E2%80%99d%20love%20to%20catch%20and%20handle%20fatal%20errors%20in%20our%20code.%20But%20that%20doesn%E2%80%99t%20seem%20possible%21%20After%20all%2C%20a%20fatal%20error%20is%20fatal%E2%80%94isn%E2%80%99t%20it%3F%20And%2C%20yet%2C%20Lens%20does%20it.%20Handle%20fatal%20errors%20with%20a%20technique%20straight%20out%20of%20Lens%21&amp;mini=true" class="svg"><:include "theme/images/linked-in.svg/":></a></li>
+	<li><a title="Send this article by email" href="mailto:?subject=Handle%20a%20PHP%20fatal%20error&amp;body=Read%20the%20article%3A%0Ahttp%3A%2F%2Flens.guide%2Farticles%2Fhandle-a-fatal-error%2F" class="svg"><:include "theme/images/email.svg/":></a></li>
+</ul>

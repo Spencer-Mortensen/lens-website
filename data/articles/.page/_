@@ -1,14 +1,9 @@
 <ul class="articles">
 	<li>
 <section>
-<a href="<:url "articles/handle-a-fatal-error/":>" class="svg"><:include "articles/handle-a-fatal-error/cover.svg/":></a>
-<h1><a href="<:url "articles/handle-a-fatal-error/":>">Handle a fatal error</a></h1>
-
-<p>We’d love to catch and handle fatal errors in our code.
-But that doesn’t seem possible!
-After all, a fatal error is <i>fatal</i>—isn’t it?
-And, yet, Lens does it.
-Handle fatal errors with a technique straight out of Lens!</p>
+<a href="<:url "articles/handle-a-fatal-error/":>" class="svg"><:include "articles/handle-a-fatal-error/image.svg/":></a>
+<h1><a href="<:url "articles/handle-a-fatal-error/":>"><:include "articles/handle-a-fatal-error/.title/":></a></h1>
+<p><:include "articles/handle-a-fatal-error/.summary/":></p>
 </section>
 	</li>
 </ul>

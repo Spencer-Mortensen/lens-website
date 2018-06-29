@@ -308,14 +308,6 @@ a[href].download:hover, a[href].download:active {
 	color: #000000;
 }
 
-.svg .light-fill {
-	fill: #ffffff;
-}
-
-.svg .light-stroke {
-	fill: #ffffff;
-}
-
 .svg .dark-fill {
 	fill: #222222;
 }
@@ -405,20 +397,12 @@ a[href].download:hover, a[href].download:active {
 	font-weight: bold;
 }
 
-.tabs .light-fill {
-	fill: #ffffff;
-}
-
 .tabs input ~ label .dark-fill {
 	fill: #cccccc;
 }
 
 .tabs input:checked ~ label .dark-fill {
 	fill: #222222;
-}
-
-.tabs .light-stroke {
-	stroke: #ffffff;
 }
 
 .tabs input ~ label .dark-stroke {
