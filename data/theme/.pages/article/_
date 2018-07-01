@@ -2,16 +2,14 @@
 
 <html lang="en">
 
-<!-- Try to keep your images as close to 1.91:1 aspect ratio as possible. -->
-<!-- Use images that are at least 1200 x 630 pixels. -->
-<!-- Images can be up to 8MB in size. -->
+<!-- Use images that are 600px x 314px or 1200px x 628px -->
 <!--http://ogp.me/-->
 <!--https://developers.facebook.com/docs/sharing/best-practices-->
 <!--https://www.linkedin.com/post-inspector/inspect-->
 <!--https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started-->
-<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# fb: http://ogp.me/ns/fb#">
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta property="og:site_name" content="Lens">
+	<meta property="og:site_name" content="<:include ".title/":>">
 	<meta property="og:url" content="http://lens.guide<:url "<:path:>" true:>">
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="<:include "<:path:>.title/":>">
@@ -21,17 +19,18 @@
 	<meta property="og:image:width" content="<:include "<:path:>image.jpg/.width":>">
 	<meta property="og:image:height" content="<:include "<:path:>image.jpg/.height":>">
 	<meta property="og:image:alt" content="<:include "<:path:>image.jpg/.summary":>">
-
-	<meta property="article:published_time" content=""> # datetime - When the article was first published.
-	<meta property="article:modified_time" content=""> # datetime - When the article was last changed.
-	<meta property="article:expiration_time" content=""> # datetime - When the article is out of date after.
-	<meta property="article:author" content=""> # profile array - Writers of the article.
-	<meta property="article:section" content=""> # string - A high-level section name. E.g. Technology
-	<meta property="article:tag" content=""> # string array - Tag words associated with this article.
-
-	<meta property="fb:app_id" content="115190258555800">
+	<meta property="article:published_time" content="<:date <:include "<:path:>.publishedTime/":> "Y-m-d":>">
+	<meta property="article:modified_time" content="<:date <:include "<:path:>.updatedTime/":> "Y-m-d":>">
+	<meta property="article:author" content="http://lens/community/">
+	<meta property="article:section" content="PHP">
+	<meta property="article:tag" content="php">
+	<meta property="article:tag" content="fatal">
+	<meta property="article:tag" content="error">
+	<meta property="article:tag" content="exceptions">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@PhpLens">
+	<meta name="twitter:creator" content="@PhpLens">
 	<title><:include "<:path:>.title/":> | Lens</title>
-	<meta name="description" content="<:include "<:path:>.summary/":>">
 	<link href="<:url "theme/css/style.css":>" rel="stylesheet" type="text/css">
 	<link href="<:url "theme/css/articles.css":>" rel="stylesheet" type="text/css">
 	<link href="<:url "theme/css/article.css":>" rel="stylesheet" type="text/css">

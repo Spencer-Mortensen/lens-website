@@ -1,7 +1,10 @@
 Adjust the icon sizing to avoid the right-edge cutoff
 Try <https://buffer.com/#individuals>?
 
-Use open-graph meta tags in articles: https://www.linkedin.com/post-inspector/
+Articles: use images that are at least 1200px x 628px
+Add a Facebook app_id for analytics: https://developers.facebook.com/docs/sharing/webmasters#basic
+Verify social-media meta tags
+
 
 # Add these instructions somewhere:
 === .gitignore ===
