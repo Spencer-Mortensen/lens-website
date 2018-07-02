@@ -2,11 +2,6 @@
 
 <html lang="en">
 
-<!-- Use images that are 600px x 314px or 1200px x 628px -->
-<!--http://ogp.me/-->
-<!--https://developers.facebook.com/docs/sharing/best-practices-->
-<!--https://www.linkedin.com/post-inspector/inspect-->
-<!--https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started-->
 <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta property="og:site_name" content="<:include ".title/":>">
@@ -43,7 +38,7 @@
 
 <body>
 
-<header><nav id="menu"><:include ".menu/":></nav></header>
+<header><nav id="articles"><a href="<:url "articles/":>">Articles</a></nav></header>
 
 <article>
 <h1><:include "<:path:>.title/":></h1>
