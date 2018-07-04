@@ -1,9 +1,8 @@
 Mobile theme
 
 Adjust the icon sizing to avoid the right-edge cutoff
-Try <https://buffer.com/#individuals>?
 
-Articles: use images that are at least 1200px x 628px
+Articles (Facebook, LinkedIn): use images that are at least 1200px x 628px
 Add a Facebook app_id for analytics: https://developers.facebook.com/docs/sharing/webmasters#basic
 Verify social-media meta tags
 
@@ -26,6 +25,10 @@ TODO: Add screenshots to the homepage
 TODO: Add "Edit this page" link
 
 Page: On the "Why" page, move the most important reason to the top
+Page: On the "Guide" page, pre-select the tab for the current operating system
+Page: On the "Guide" page, add a "Download" link for the first example (Math.php)
+
+Theme: On a Mac, in the Chrome browser, in the tab, the Lens favicon appears pixellated
 
 === IDEAS ===
 
