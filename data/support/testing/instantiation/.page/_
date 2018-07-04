@@ -31,7 +31,7 @@ use DateTime;
 
 // Test
 $clock = new Clock();
-$output = $clock-&gt;getTime();
+$clock-&gt;getTime();
 
 // Effect
 $time = new DateTime();
