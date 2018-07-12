@@ -1,11 +1,24 @@
+Page: On the "Why" page, move the most important reason to the top
+Page: On the "Guide" page, add a "Download" link for the first example (Math.php)
+Page: On the homepage, put the Lens description in an H1 tag
+Page: On the "Why" page, add a link to the "Guide" page (this is the call-to-action for the page)
+
 Mobile theme
 
-Adjust the icon sizing to avoid the right-edge cutoff
+Clean up the integration pages
+# Packagist badges: https://poser.pugx.org/
 
-Articles (Facebook, LinkedIn): use images that are at least 1200px x 628px
+Articles: https://schema.org/BlogPosting
 Add a Facebook app_id for analytics: https://developers.facebook.com/docs/sharing/webmasters#basic
 Verify social-media meta tags
+Articles (Facebook, LinkedIn): use images that are at least 1200px x 628px
 
+Article: Recommended code quality tools (insert a Google ad?)
+Article: Get started with unit testing
+Article: Why unit test?
+
+Support: Install PHP on Windows
+Support: Install Composer
 
 # Add these instructions somewhere:
 === .gitignore ===
@@ -13,26 +26,6 @@ Verify social-media meta tags
 /lens/coverage/
 ======
 
-# Packagist badges: https://poser.pugx.org/
-
-Support: Install PHP on Windows
-Support: Install Composer
-
-Article: Recommended code quality tools
-Article: Get started with unit testing (Insert a Google ad?)
-
-TODO: Add screenshots to the homepage
-TODO: Add "Edit this page" link
-
-Page: On the "Why" page, move the most important reason to the top
-Page: On the "Guide" page, pre-select the tab for the current operating system
-Page: On the "Guide" page, add a "Download" link for the first example (Math.php)
-
-Theme: On a Mac, in the Chrome browser, in the tab, the Lens favicon appears pixellated
-
-=== IDEAS ===
-
-On the "Community" page: Add a "Thank you" section
 On the "Community" page: Add a "Contribute to Lens" section
 	* Find people who would be willing to provide feedback
 	* Evangelize: let people know about Lens
@@ -40,3 +33,20 @@ On the "Community" page: Add a "Contribute to Lens" section
 	* Answer questions on StackOverflow
 	* Codeception and Lens?
 # https://www.ubuntu.com/community
+
+Add "Edit this page" link
+
+On the "Community" page: Add a "Thank you" section
+
+=== IDEAS ===
+
+Theme: add colored bubbles?
+
+Adjust the icon sizing to avoid the right-edge cutoff
+
+TODO: Add screenshots to the homepage
+
+Page: On the "Guide" page, pre-select the tab for the current operating system
+Page: On the "Why" page, compare Lens and PhpUnit (for search engines and some users)?
+
+Theme: On a Mac, in the Chrome browser, in the tab, the Lens favicon appears pixellated
