@@ -3,20 +3,20 @@
 <html lang="en">
 
 <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
 	<meta property="og:site_name" content="<:include ".title/":>">
-	<meta property="og:url" content="http://lens.guide<:url "<:path:>" true:>">
+	<meta property="og:url" content="http://lens.guide<:url <:path:> true:>">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="<:include "<:path:>.title/":>">
-	<meta property="og:description" content="<:include "<:path:>.summary/":>">
-	<meta property="og:image" content="http://lens.guide<:url "<:path:>image.jpg" true:>">
+	<meta property="og:title" content="<:include <:join <:path:> ".title/":>:>">
+	<meta property="og:description" content="<:include <:join <:path:> ".summary/":>:>">
+	<meta property="og:image" content="http://lens.guide<:url <:join <:path:> "image.jpg":> true:>">
 	<meta property="og:image:type" content="image/jpeg">
-	<meta property="og:image:width" content="<:include "<:path:>image.jpg/.width":>">
-	<meta property="og:image:height" content="<:include "<:path:>image.jpg/.height":>">
-	<meta property="og:image:alt" content="<:include "<:path:>image.jpg/.summary":>">
-	<meta property="article:published_time" content="<:date <:include "<:path:>.publishedTime/":> "Y-m-d":>">
-	<meta property="article:modified_time" content="<:date <:include "<:path:>.updatedTime/":> "Y-m-d":>">
-	<meta property="article:author" content="http://lens/community/">
+	<meta property="og:image:width" content="<:include <:join <:path:> "image.jpg/.width":>:>">
+	<meta property="og:image:height" content="<:include <:join <:path:> "image.jpg/.height":>:>">
+	<meta property="og:image:alt" content="<:include <:join <:path:> "image.jpg/.summary":>:>">
+	<meta property="article:published_time" content="<:date <:integer <:include <:join <:path:> ".publishedTime/":>:>:> "Y-m-d":>">
+	<meta property="article:modified_time" content="<:date <:integer <:include <:join <:path:> ".updatedTime/":>:>:> "Y-m-d":>">
+	<meta property="article:author" content="Spencer Mortensen">
 	<meta property="article:section" content="PHP">
 	<meta property="article:tag" content="php">
 	<meta property="article:tag" content="fatal">
@@ -25,7 +25,7 @@
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="@PhpLens">
 	<meta name="twitter:creator" content="@PhpLens">
-	<title><:include "<:path:>.title/":> | Lens</title>
+	<title><:include <:join <:path:> ".title/":>:> | Lens</title>
 	<link href="<:url "theme/css/style.css":>" rel="stylesheet" type="text/css">
 	<link href="<:url "theme/css/articles.css":>" rel="stylesheet" type="text/css">
 	<link href="<:url "theme/css/article.css":>" rel="stylesheet" type="text/css">
@@ -41,9 +41,9 @@
 <header><nav id="articles"><a href="<:url "articles/":>">Articles</a></nav></header>
 
 <article>
-<h1><:include "<:path:>.title/":></h1>
+<h1><:include <:join <:path:> ".title/":>:></h1>
 
-<:include "<:path:>.page/":>
+<:include <:join <:path:> ".page/":>:>
 </article>
 
 </body>

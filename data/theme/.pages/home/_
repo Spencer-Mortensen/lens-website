@@ -3,8 +3,8 @@
 <html lang="en">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Lens: the unit-testing framework for PHP that needs no assertions</title>
+	<meta charset="utf-8">
+	<title><:include <:join <:path:> ".page/.title":>:></title>
 	<link href="<:url "theme/css/style.css":>" rel="stylesheet" type="text/css">
 	<link href="<:url "theme/css/home.css":>" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa:400|Montserrat|Inconsolata" rel="stylesheet">
@@ -17,9 +17,7 @@
 <header><nav id="menu"><:include ".menu/":></nav></header>
 
 <article>
-<h1><img src="/theme/images/lens.svg" width="78px" height="78px">Lens</h1>
-
-<p>The unit-testing framework for PHP that needs no assertions</p>
+<:include <:join <:path:> ".page":>:>
 </article>
 
 </body>

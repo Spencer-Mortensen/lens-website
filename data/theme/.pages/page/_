@@ -3,8 +3,8 @@
 <html lang="en">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title><:include "<:path:>.title/":> | Lens</title>
+	<meta charset="utf-8">
+	<title><:include <:join <:path:> ".title/":>:> | Lens</title>
 	<link href="<:url "theme/css/style.css":>" rel="stylesheet" type="text/css">
 	<link href="<:url "theme/css/articles.css":>" rel="stylesheet" type="text/css">
 	<link href="<:url "theme/css/article.css":>" rel="stylesheet" type="text/css">
@@ -20,9 +20,9 @@
 <header><nav id="menu"><:include ".menu/":></nav></header>
 
 <article>
-<h1><:include "<:path:>.title/":></h1>
+<h1><:include <:join <:path:> ".title/":>:></h1>
 
-<:include "<:path:>.page/":>
+<:include <:join <:path:> ".page/":>:>
 </article>
 
 </body>

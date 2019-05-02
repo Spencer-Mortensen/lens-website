@@ -1,0 +1,5 @@
+<:if
+	<:exists <:path:>:>
+		<:file <:path:>:>
+		<:http 404 <:include "theme/.pages/404/":>:>
+:>

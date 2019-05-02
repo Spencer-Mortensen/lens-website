@@ -69,16 +69,14 @@ $x = 2;</code></dd>
 You’ve written your first test!</p>
 
 <p>Hmm!
-What would happen if you were to change that expected effect in the Effect section to <i>something else?</i>
+What would happen if you were to make a change in that “// Effect” section?</i>
 Would Lens catch the discrepancy?</p>
 
 
 <h2>Write a test for your project</h2>
 
 <p>Now let’s test an actual class from your project.
-Which class will you choose?</p>
-
-<p>Suppose your source code looks something like this:</p>
+Suppose your source code looks something like this:</p>
 
 <dl class="file">
 	<dt>src/Math.php</dt>

@@ -1,28 +1,35 @@
-<h2>Your time is valuable</h2>
+<h2>You’re vulnerable</h2>
 
-<p><b>Lens reduces the time spent unit testing by over 50%.</b>
-How many hours have you spent writing and testing code?
-Imagine what you could accomplish if <i>half</i> your time were returned to you.</p>
+<p>Assertion-based frameworks only check the values in your assertions.
+If it wasn’t asserted, <b><i>it didn’t get checked</i></b>.</p>
+
+<p>That method you’re testing?
+It could destroy your development environment with a filesystem call.
+It could start using pass-by-reference to make changes to other parts of your code.
+It could write to your output buffer and corrupt your AJAX.
+It could be interacting with global variables, calling a public static method, or creating constants.</p>
+
+<p><i>Are</i> you testing for this?
+<i>Can</i> you test for this?
+If you’re using an assertion-based framework, <b>you’re vulnerable</b>.</p>
+
+<p>Lens is different.
+Lens goes far beyond assertions.
+Lens compares the execution states.
+This gives Lens a simple way to detect side effects.
+Assertions check a single value.
+<b>Lens checks every side effect</b> on every test.</p>
 
 
-<h2>You’re at risk</h2>
+<h2>You want to build projects</h2>
 
-<p><b>What about side effects?</b>
-Assertion-based frameworks only check the values in your assertions.
-If it wasn’t asserted, <i>it didn’t get checked.</i></p>
-
-<p>At any time, you could be bitten by:</p>
+<p>Lens eliminates assertions, and all of the boiller-plate code that goes with it.
+That accelerates your development in two ways:</p>
 
 <ul>
-	<li>a malicious system call buried in a merge request</li>
-	<li>a forgotten debugging statement that will break your AJAX</li>
-	<li>a suppressed warning that could have revealed a big issue</li>
-	<li>filesystem calls that assume your development area resembles production</li>
-	<li>a new pass-by-reference behavior that will overwrite your variables</li>
+	<li>It cuts your unit-testing time in half.</li>
+	<li>It eliminates the learning curve. You’re already familiar with your own project code, and that’s literally all that’s left!</li>
 </ul>
-
-<p>Assertion-based frameworks <i>won’t</i> protect you and they <i>won’t</i> check every side effect.
-<b>Lens will.</b></p>
 
 
 <h2>You want 100%</h2>
@@ -32,4 +39,8 @@ Usually, it’s the controller or the data-access layer.
 Even with partial mocks, and considerable effort, there is some code that escapes testing.</p>
 
 <p>With most unit-testing frameworks, the best you can hope for is <i>almost</i> or <i>good enough</i>.
-<b>With Lens, you can get 100%.</b></p>
+With Lens, <b>you can finally have 100% code coverage</b>.</p>
+
+<p>Time to show off your numbers!</p>
+
+<p><a href="<:url "guide/":>">Now let’s get you started!</a></p>
