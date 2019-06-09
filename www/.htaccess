@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# Append directory slashes before rewriting URLs
+RewriteRule (^|/)\.?[^./]+$ http://%{HTTP_HOST}%{REQUEST_URI}/ [R=301,L]
+
+# Use Synerga
+RewriteRule ^ - [E=URI:%{REQUEST_URI}]
+RewriteRule !^index\.php$ /index.php [QSA,L]
+
+# Set the Synerga environment variables
+RewriteCond %{ENV:REDIRECT_URI} ^/?(.*)$
+RewriteRule ^ - [E=SYNERGA_BASE:/,E=SYNERGA_PATH:%1]
+
+# Enable If-None-Match support
+RewriteCond %{HTTP:If-None-Match} !=""
+RewriteRule ^ - [E=HTTP_IF_NONE_MATCH:%{HTTP:If-None-Match}]

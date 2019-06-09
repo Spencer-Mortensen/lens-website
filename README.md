@@ -25,41 +25,20 @@ cd lens.guide
 composer install
 ```
 
-And create the file "/var/www/lens/index.php":  
-<pre>&lt;?php<br>
-namespace Synerga;<br>
-$projectDirectory = <i>'/home/user/lens.guide'</i>;<br>
-require "{$projectDirectory}/vendor/autoload.php";<br>
-$data = "{$projectDirectory}/data";<br>
-$synerga = new Synerga();
-$synerga->run('<:router:>');</pre>
-
-But be sure to use the correct path to your "lens.guide" directory!
-
 Create the file "/etc/apache2/sites-available/lens.conf":  
-<pre>&lt;VirtualHost *:80>
+<pre>
+&lt;VirtualHost *:80&gt;
 &#9;ServerName lens
 &#9;ServerAdmin webmaster@localhost
-&#9;DocumentRoot "/var/www/lens"<br>
-&#9;&lt;Directory "/var/www/lens"&gt;
-&#9;&#9;AllowOverride None
-&#9;&#9;Require all granted<br>
-&#9;&#9;RewriteEngine On<br>
-&#9;&#9;# Append directory slashes before rewriting URLs
-&#9;&#9;RewriteRule (^|/)\.?[^./]+$ http://%{HTTP_HOST}%{REQUEST_URI}/ [R=301,L]<br>
-&#9;&#9;# Use Synerga
-&#9;&#9;RewriteRule ^ - [E=URI:%{REQUEST_URI}]
-&#9;&#9;RewriteRule !^index\.php$ /index.php [QSA,L]<br>
-&#9;&#9;# Set the Synerga environment variables
-&#9;&#9;RewriteCond %{ENV:REDIRECT_URI} ^/?(.*)$
-&#9;&#9;RewriteRule ^ - [E=SYNERGA_BASE:/,E=SYNERGA_PATH:%1]<br>
-&#9;&#9;# Enable If-None-Match support
-&#9;&#9;RewriteCond %{HTTP:If-None-Match} !=""
-&#9;&#9;RewriteRule ^ - [E=HTTP_IF_NONE_MATCH:%{HTTP:If-None-Match}]
+&#9;DocumentRoot "/home/user/lens.guide/www"<br>
+&#9;&lt;Directory "/home/user/lens.guide/www"&gt;
+&#9;&#9;AllowOverride all
+&#9;&#9;Require all granted
 &#9;&lt;/Directory&gt;<br>
 &#9;ErrorLog ${APACHE_LOG_DIR}/error.log
 &#9;CustomLog ${APACHE_LOG_DIR}/access.log combined
-&lt;/VirtualHost&gt;</pre>
+&lt;/VirtualHost&gt;
+</pre>
 
 Enable the website:  
 ```bash

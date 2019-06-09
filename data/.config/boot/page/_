@@ -1,0 +1,13 @@
+<:if
+	<:exists <:join <:path:> ".page":>:>
+		<:http 200
+			<:include <:join "theme/.pages/"
+				<:controller {
+					"^$": "home",
+					"^articles/[^/]": "article",
+					"": "page"
+				} :>
+			"/":>:>
+		:>
+		<:http 404 <:include "theme/.pages/404/":>:>
+:>

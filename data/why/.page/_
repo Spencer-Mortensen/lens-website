@@ -1,21 +1,17 @@
 <h2>You’re vulnerable</h2>
 
-<p>Assertion-based frameworks only check the values in your assertions.
-If it wasn’t asserted, <b><i>it didn’t get checked</i></b>.</p>
-
-<p>That method you’re testing?
+<p>That method you’re unit testing?
 It could destroy your development environment with a filesystem call.
-It could start using pass-by-reference to make changes to other parts of your code.
+It could use pass-by-reference to make changes to other parts of your code.
 It could write to your output buffer and corrupt your AJAX.
-It could be interacting with global variables, calling a public static method, or creating constants.</p>
+It could interact with global variables, call public static methods, or instantiate unsafe objects.</p>
 
-<p><i>Are</i> you testing for this?
-<i>Can</i> you test for this?
-If you’re using an assertion-based framework, <b>you’re vulnerable</b>.</p>
+<p>Assertion-based frameworks only check the value in your assertion.
+If it wasn’t asserted, <b><i>it didn’t get checked</i></b>.</p>
 
 <p>Lens is different.
 Lens goes far beyond assertions.
-Lens compares the execution states.
+Lens examines the whole PHP execution environment.
 This gives Lens a simple way to detect side effects.
 Assertions check a single value.
 <b>Lens checks every side effect</b> on every test.</p>
@@ -27,8 +23,8 @@ Assertions check a single value.
 That accelerates your development in two ways:</p>
 
 <ul>
-	<li>It cuts your unit-testing time in half.</li>
-	<li>It eliminates the learning curve. You’re already familiar with your own project code, and that’s literally all that’s left!</li>
+	<li>It cuts your unit-testing work in half.</li>
+	<li>It eliminates the learning curve: You’re already familiar with your own project code, and that’s literally all that’s left!</li>
 </ul>
 
 
@@ -39,7 +35,7 @@ Usually, it’s the controller or the data-access layer.
 Even with partial mocks, and considerable effort, there is some code that escapes testing.</p>
 
 <p>With most unit-testing frameworks, the best you can hope for is <i>almost</i> or <i>good enough</i>.
-With Lens, <b>you can finally have 100% code coverage</b>.</p>
+With Lens, <b>you can finally reach 100% code coverage</b>.</p>
 
 <p>Time to show off your numbers!</p>
 

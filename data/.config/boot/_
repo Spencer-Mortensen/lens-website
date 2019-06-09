@@ -1,6 +1,8 @@
-<:include <:join ".config/controllers/"
-	<:controller {
-		"[^./]+\\.[^./]+$": "file",
-		"": "page"
-	} :>
-"/":>:>
+<:include
+	<:join ".config/boot/"
+		<:controller {
+			"[^./]+\\.[^./]+$": "file",
+			"": "page"
+		} :>
+	"/":>
+:>
