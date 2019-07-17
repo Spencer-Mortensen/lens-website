@@ -6,14 +6,21 @@ $projectDirectory = dirname(__DIR__);
 
 require "{$projectDirectory}/vendor/autoload.php";
 
+$settings = [];
+$values = [];
+
+$synerga = new SynergaFactory($settings, $values);
+
 $settings = array_merge(
-	SynergaSettings::getSettings(),
+	$synerga->getSettings(),
 	[
-		'data:path' => "{$projectDirectory}/data",
-		'url:base' => $_SERVER['SYNERGA_BASE'],
-		'url:path' => $_SERVER['SYNERGA_PATH']
+		'settings:data:path' => "{$projectDirectory}/data",
+		'settings:url' => [
+			'base' => $_SERVER['SYNERGA_BASE'],
+			'path' => $_SERVER['SYNERGA_PATH']
+		]
 	]
 );
 
-$synerga = new Synerga($settings);
-$synerga->run('<:include ".config/boot/":>');
+$interpreter = $synerga->get('interpreter');
+$interpreter->interpret('<:include ".config/boot/":>');
